@@ -1,0 +1,214 @@
+<style>
+  .app-sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    z-index: 15;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+
+  .app-sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+  }
+
+  .sidebar-nav {
+    list-style: none;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .nav-section-title {
+    padding: 12px 24px 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #64748B;
+  }
+
+  .app-sidebar.collapsed .nav-section-title {
+    display: none;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+    font-size: 14px;
+  }
+
+  .nav-item:hover {
+    background-color: var(--sidebar-hover);
+    color: var(--sidebar-text-active);
+  }
+
+  .nav-item.active {
+    background-color: var(--sidebar-active);
+    color: var(--sidebar-text-active);
+    border-left: 4px solid var(--primary-color);
+  }
+
+  .nav-item.sub-item {
+    padding-left: 48px;
+    font-size: 13px;
+  }
+
+  .nav-icon {
+    margin-right: 14px;
+    font-size: 20px;
+  }
+
+  .app-sidebar.collapsed .nav-text {
+    display: none;
+  }
+
+  .app-sidebar.collapsed .nav-item {
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .app-sidebar.collapsed .nav-item.sub-item {
+    padding-left: 0;
+  }
+
+  .app-sidebar.collapsed .nav-icon {
+    margin-right: 0;
+  }
+</style>
+
+<aside class="app-sidebar" id="sidebar">
+  <ul class="sidebar-nav">
+    <li>
+      <a class="nav-item active">
+        <span class="material-symbols-outlined nav-icon">dashboard</span>
+        <span class="nav-text">Dashboard</span>
+      </a>
+    </li>
+
+    <li class="nav-section-title">Masters</li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">corporate_fare</span>
+        <span class="nav-text">Society</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">inventory</span>
+        <span class="nav-text">Suppliers</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">engineering</span>
+        <span class="nav-text">Execution Agencies</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">account_balance</span>
+        <span class="nav-text">Society Accounts</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">account_tree</span>
+        <span class="nav-text">Chart of Accounts</span>
+      </a>
+    </li>
+
+    <li class="nav-section-title">Operations</li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">gavel</span>
+        <span class="nav-text">Tender Register</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">assignment</span>
+        <span class="nav-text">Work Orders</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">assignment_ind</span>
+        <span class="nav-text">Execution Assignment</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">receipt_long</span>
+        <span class="nav-text">Government Bills</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">shopping_bag</span>
+        <span class="nav-text">GST Purchases</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">book</span>
+        <span class="nav-text">Voucher Register</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">swap_horiz</span>
+        <span class="nav-text">Transactions</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item sub-item">
+        <span class="material-symbols-outlined nav-icon">handshake</span>
+        <span class="nav-text">Settlements</span>
+      </a>
+    </li>
+
+    <li class="nav-section-title">Management</li>
+    <li>
+      <a class="nav-item">
+        <span class="material-symbols-outlined nav-icon">verified_user</span>
+        <span class="nav-text">Compliance</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item">
+        <span class="material-symbols-outlined nav-icon">folder_shared</span>
+        <span class="nav-text">Documents</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item">
+        <span class="material-symbols-outlined nav-icon">bar_chart</span>
+        <span class="nav-text">Reports</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item">
+        <span class="material-symbols-outlined nav-icon">menu_book</span>
+        <span class="nav-text">Knowledge Base</span>
+      </a>
+    </li>
+    <li>
+      <a class="nav-item">
+        <span class="material-symbols-outlined nav-icon">admin_panel_settings</span>
+        <span class="nav-text">Administration</span>
+      </a>
+    </li>
+  </ul>
+</aside>
