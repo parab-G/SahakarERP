@@ -152,6 +152,13 @@ function safeExecute(callback, source) {
 
     const result = callback();
 
+    // Service methods may intentionally return a Response object for
+    // validation and not-found outcomes. Preserve it instead of wrapping it
+    // as a successful payload.
+    if (result && typeof result === "object" && typeof result.success === "boolean") {
+      return result;
+    }
+
     return Response.success(
 
       result,

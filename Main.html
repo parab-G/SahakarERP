@@ -74,6 +74,10 @@
             window.DashboardModule.load();
           }
 
+          if (requestedModule === 'Society' && window.SocietyModule) {
+            window.SocietyModule.initialize();
+          }
+
           document.querySelectorAll('.nav-item[data-module]').forEach(item => {
             item.classList.toggle('active', item.dataset.module === requestedModule);
           });

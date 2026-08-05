@@ -6,7 +6,8 @@
  */
 const MODULE_TEMPLATES = Object.freeze({
   Dashboard: 'App',
-  Settings: 'Modules/Settings'
+  Settings: 'Modules/Settings',
+  Society: 'Modules/Society'
 });
 
 function loadModule(moduleName) {
