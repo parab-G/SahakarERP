@@ -23,8 +23,8 @@
 
       <!-- Main Content Area -->
       <main class="main-content" id="main-content">
-        <!-- Default Content View -->
-        <?!= include('App'); ?>
+        <!-- Dashboard is loaded by ModuleLoader on startup. -->
+        <div class="dashboard-loader">Loading dashboard...</div>
       </main>
     </div>
 
@@ -70,6 +70,10 @@
             document.body.appendChild(script);
           });
 
+          if (requestedModule === 'Dashboard' && window.DashboardModule) {
+            window.DashboardModule.load();
+          }
+
           document.querySelectorAll('.nav-item[data-module]').forEach(item => {
             item.classList.toggle('active', item.dataset.module === requestedModule);
           });
@@ -81,7 +85,7 @@
           }
         })
         .withFailureHandler(error => {
-          workspace.innerHTML = '<div class="placeholder-panel">Module is not available.</div>';
+          workspace.innerHTML = '<div class="dashboard-error">Unable to load this module. Please try again.</div>';
           console.error('Sahakar ERP module load error:', error);
         })
         .loadModule(requestedModule);
@@ -96,6 +100,8 @@
           sidebar.classList.toggle('collapsed');
         });
       }
+
+      loadModule('Dashboard');
 
     });
   </script>

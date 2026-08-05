@@ -11,6 +11,36 @@ const DASHBOARD_SERVICE = (() => {
 
   'use strict';
 
+  function countSheet(sheetName) {
+    try {
+      return Database.count(sheetName);
+    } catch (error) {
+      logError('DashboardService.countSheet', error);
+      return 0;
+    }
+  }
+
+  function readCounts() {
+    return {
+      societies: countSheet(SHEET_NAMES.SOCIETY_MASTER),
+      executionAgencies: countSheet(SHEET_NAMES.EXECUTION_AGENCY),
+      suppliers: countSheet(SHEET_NAMES.SUPPLIER),
+      societyAccounts: countSheet(SHEET_NAMES.SOCIETY_ACCOUNTS),
+      chartOfAccounts: countSheet(SHEET_NAMES.CHART_OF_ACCOUNTS),
+      tenders: countSheet(SHEET_NAMES.TENDER),
+      workOrders: countSheet(SHEET_NAMES.WORK_ORDER),
+      executionAssignments: countSheet(SHEET_NAMES.EXECUTION_ASSIGNMENT),
+      vouchers: countSheet(SHEET_NAMES.VOUCHER),
+      transactions: countSheet(SHEET_NAMES.TRANSACTION),
+      governmentBills: countSheet(SHEET_NAMES.GOVERNMENT_BILL),
+      gstPurchases: countSheet(SHEET_NAMES.GST_PURCHASE),
+      settlements: countSheet(SHEET_NAMES.SETTLEMENT),
+      documents: countSheet(SHEET_NAMES.DOCUMENT),
+      compliances: countSheet(SHEET_NAMES.COMPLIANCE),
+      reports: countSheet(SHEET_NAMES.REPORTS)
+    };
+  }
+
   /**
    * Returns all dashboard summary information.
    */
@@ -19,38 +49,7 @@ const DASHBOARD_SERVICE = (() => {
     return safeExecute(() => {
 
       const summary = {
-
-        societies: Database.count(SHEET_NAMES.SOCIETY_MASTER),
-
-        executionAgencies: Database.count(SHEET_NAMES.EXECUTION_AGENCY),
-
-        suppliers: Database.count(SHEET_NAMES.SUPPLIER),
-
-        societyAccounts: Database.count(SHEET_NAMES.SOCIETY_ACCOUNTS),
-
-        chartOfAccounts: Database.count(SHEET_NAMES.CHART_OF_ACCOUNTS),
-
-        tenders: Database.count(SHEET_NAMES.TENDER),
-
-        workOrders: Database.count(SHEET_NAMES.WORK_ORDER),
-
-        executionAssignments: Database.count(SHEET_NAMES.EXECUTION_ASSIGNMENT),
-
-        vouchers: Database.count(SHEET_NAMES.VOUCHER),
-
-        transactions: Database.count(SHEET_NAMES.TRANSACTION),
-
-        governmentBills: Database.count(SHEET_NAMES.GOVERNMENT_BILL),
-
-        gstPurchases: Database.count(SHEET_NAMES.GST_PURCHASE),
-
-        settlements: Database.count(SHEET_NAMES.SETTLEMENT),
-
-        documents: Database.count(SHEET_NAMES.DOCUMENT),
-
-        compliances: Database.count(SHEET_NAMES.COMPLIANCE),
-
-        reports: Database.count(SHEET_NAMES.REPORTS),
+        ...readCounts(),
 
         generatedOn: generateTimestamp(),
 
@@ -73,21 +72,22 @@ const DASHBOARD_SERVICE = (() => {
 
     return safeExecute(() => {
 
-      return {
-
+      const summary = {
         application: APP_NAME,
-
         version: ERP_VERSION,
-
-        databaseConnected: true,
-
-        spreadsheetName:
-          Database.getDatabase().getName(),
-
+        databaseConnected: false,
+        spreadsheetName: '',
         generatedOn: generateTimestamp()
-
       };
 
+      try {
+        summary.spreadsheetName = Database.getDatabase().getName();
+        summary.databaseConnected = true;
+      } catch (error) {
+        logError('DashboardService.getSystemStatus', error);
+      }
+
+      return summary;
     });
 
   }
@@ -100,47 +100,63 @@ const DASHBOARD_SERVICE = (() => {
 
     return safeExecute(() => {
 
+      const counts = readCounts();
+
       return [
 
         {
           title: "Societies",
-          value: Database.count(SHEET_NAMES.SOCIETY_MASTER),
+          value: counts.societies,
           icon: "groups",
           color: "primary"
         },
 
         {
           title: "Execution Agencies",
-          value: Database.count(SHEET_NAMES.EXECUTION_AGENCY),
+          value: counts.executionAgencies,
           icon: "engineering",
           color: "success"
         },
 
         {
           title: "Suppliers",
-          value: Database.count(SHEET_NAMES.SUPPLIER),
+          value: counts.suppliers,
           icon: "local_shipping",
           color: "warning"
         },
 
         {
           title: "Tenders",
-          value: Database.count(SHEET_NAMES.TENDER),
+          value: counts.tenders,
           icon: "gavel",
           color: "danger"
         },
 
         {
           title: "Work Orders",
-          value: Database.count(SHEET_NAMES.WORK_ORDER),
+          value: counts.workOrders,
           icon: "assignment",
           color: "info"
         },
 
         {
           title: "Vouchers",
-          value: Database.count(SHEET_NAMES.VOUCHER),
+          value: counts.vouchers,
           icon: "receipt_long",
+          color: "secondary"
+        },
+
+        {
+          title: "Government Bills",
+          value: counts.governmentBills,
+          icon: "receipt_long",
+          color: "info"
+        },
+
+        {
+          title: "GST Purchases",
+          value: counts.gstPurchases,
+          icon: "shopping_bag",
           color: "secondary"
         }
 
@@ -202,3 +218,8 @@ const DASHBOARD_SERVICE = (() => {
   });
 
 })();
+
+/** Public Apps Script entry point used by the Dashboard frontend. */
+function initializeDashboard() {
+  return DASHBOARD_SERVICE.initializeDashboard();
+}
