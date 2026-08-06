@@ -11,6 +11,11 @@ Guidelines
 - AI/CURRENT_SPRINT.md always represents the active sprint and must not be edited to represent past sprints; instead archive into this folder when a sprint completes.
 - Archived sprint files MUST NEVER be edited after they are added. If a correction is needed, create an explicit amendment file (e.g., Sprint-4.2-amendment-1.md) and reference the original.
 
+Index
+
+- Sprint 4.2 — Completed — AI/SPRINTS/Sprint-4.2.md
+- Sprint 4.3 — Planned — AI/SPRINTS/Sprint-4.3-PLAN.md (planning)
+
 Location
 
 AI/SPRINTS/

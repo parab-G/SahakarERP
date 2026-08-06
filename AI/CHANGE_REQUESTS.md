@@ -2,10 +2,6 @@
 
 Version: 1.0.0
 
-(To be completed# CHANGE_REQUESTS
-
-Version: 1.0.0
-
 Status: Active
 
 Owner: SahakarERP Core Team
