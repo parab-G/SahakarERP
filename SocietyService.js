@@ -82,8 +82,15 @@ function duplicateRegistration(record, societyId) {
   );
 }
 
+function requireSocietySchema() {
+  const result = ensureSocietySchema();
+  return result.success ? null : result;
+}
+
 function getSocieties(keyword) {
   return safeExecute(() => {
+    const schemaError = requireSocietySchema();
+    if (schemaError) return schemaError;
     const term = societyText(keyword).toLowerCase();
     return Database.getAll(SOCIETY_SHEET_NAME)
       .filter(record => !term || SOCIETY_FIELDS.some(field =>
@@ -94,6 +101,8 @@ function getSocieties(keyword) {
 
 function getSociety(societyId) {
   return safeExecute(() => {
+    const schemaError = requireSocietySchema();
+    if (schemaError) return schemaError;
     if (isBlank(societyId)) return Response.error('Society ID is required');
     const record = Database.findById(SOCIETY_SHEET_NAME, societyId);
     return record || Response.notFound('Society record not found');
@@ -102,6 +111,8 @@ function getSociety(societyId) {
 
 function saveSociety(record) {
   return safeExecute(() => {
+    const schemaError = requireSocietySchema();
+    if (schemaError) return schemaError;
     const normalized = normalizeSociety(record);
     const errors = validateSociety(normalized);
     if (errors.length) return Response.validationError(errors);
@@ -127,6 +138,8 @@ function saveSociety(record) {
 
 function updateSociety(societyId, record) {
   return safeExecute(() => {
+    const schemaError = requireSocietySchema();
+    if (schemaError) return schemaError;
     if (isBlank(societyId)) return Response.error('Society ID is required for update');
     if (!Database.findById(SOCIETY_SHEET_NAME, societyId)) return Response.notFound('Society record not found');
     const normalized = normalizeSociety(record);
@@ -147,6 +160,8 @@ function updateSociety(societyId, record) {
 
 function softDeleteSociety(societyId) {
   return safeExecute(() => {
+    const schemaError = requireSocietySchema();
+    if (schemaError) return schemaError;
     if (isBlank(societyId)) return Response.error('Society ID is required');
     if (!Database.findById(SOCIETY_SHEET_NAME, societyId)) return Response.notFound('Society record not found');
     return Database.updateRecord(SOCIETY_SHEET_NAME, societyId, {

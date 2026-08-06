@@ -16,7 +16,7 @@
     function byId(id) { return document.getElementById(id); }
     function showError(message, inModal) {
       const box = byId(inModal ? 'societyFormError' : 'societyError');
-      box.textContent = message || 'Something went wrong.';
+      box.textContent = message || 'Society data could not be loaded. Please verify the Society Master sheet and try again.';
       box.classList.remove('society-hidden');
     }
     function hideError(inModal) { byId(inModal ? 'societyFormError' : 'societyError').classList.add('society-hidden'); }
@@ -63,7 +63,7 @@
     }
     function load(keyword) {
       setLoading(true); hideError(false);
-      google.script.run.withSuccessHandler(response => { setLoading(false); if (!response || !response.success) { showError(response && response.message); return; } records = response.data || []; renderTable(); }).withFailureHandler(error => { setLoading(false); showError(error && error.message); }).getSocieties(keyword || '');
+      google.script.run.withSuccessHandler(response => { setLoading(false); if (!response || !response.success) { showError(response && response.message); return; } records = response.data || []; renderTable(); }).withFailureHandler(error => { setLoading(false); showError(error && (error.message || String(error))); }).getSocieties(keyword || '');
     }
     function collect() { const data = {}; fields.forEach(([field]) => { data[field] = formValue(field); }); return data; }
     function validationMessage(response) { return response && response.errors ? response.errors.map(error => error.message).join(' ') : (response && response.message); }
