@@ -239,7 +239,7 @@ Example
 
 - Reusable components reduce duplicated HTML.
 - Database.js should remain the only data access layer.
-- Every AI agent must update CURRENT_SPRINT.md before ending work.
+- Every AI agent must update CURRENT_SPRINT.md before ending its work.
 
 ---
 
@@ -332,30 +332,6 @@ A sprint is complete when
 ✓ Production verified
 
 ✓ Sprint archived
-
----
-
-# Sprint Archive Procedure
-
-When this sprint is completed
-
-1. Copy this file to
-
-AI/SPRINTS/Sprint-4.2.md
-
-2. Create a new
-
-AI/CURRENT_SPRINT.md
-
-3. Reset progress
-
-4. Update sprint number
-
-5. Update roadmap
-
-6. Begin next sprint
-
-Never overwrite completed sprint history.
 
 ---
 
