@@ -1,0 +1,22 @@
+<template id="spinner-template">
+  <div class="sahakar-spinner-wrapper">
+    <!-- overlay/backdrop element for overlay modes -->
+    <div class="sahakar-spinner-backdrop position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+      <div class="sahakar-spinner-content text-center">
+        <div class="spinner-placeholder mb-2" aria-hidden="true">
+          <!-- spinner element (border or grow) inserted dynamically by JS -->
+        </div>
+        <div class="spinner-message small text-muted" aria-live="polite"></div>
+        <div class="spinner-progress small mt-2 d-none" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <span class="spinner-percent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- inline representation for non-overlay mode -->
+    <div class="sahakar-spinner-inline d-inline-flex align-items-center gap-2">
+      <div class="spinner-placeholder-inline" aria-hidden="true"></div>
+      <div class="spinner-message-inline small text-muted" aria-live="polite"></div>
+    </div>
+  </div>
+</template>

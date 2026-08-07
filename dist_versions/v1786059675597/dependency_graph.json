@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    "Components/Alert/Alert.html",
+    "Components/Alert/Alert.js",
+    "App.html",
+    "Modules/BankMaster/BankMaster.html",
+    "Modules/BankMaster/BankMasterSchema.js",
+    "Modules/BankMaster/BankMasterScript.html",
+    "Modules/BankMaster/BankMasterService.js",
+    "Modules/BankMaster/BankMasterValidation.js",
+    "Components/Card/Card.html",
+    "Components/Card/Card.js",
+    "Code.js",
+    "Components/Alert/Alert.html",
+    "Components/Alert/Alert.js",
+    "Components/Card/Card.html",
+    "Components/Card/Card.js",
+    "Components/Core/Accessibility.js",
+    "Components/Core/BaseComponent.js",
+    "Components/Core/ComponentFactory.js",
+    "Components/Core/ComponentRegistry.js",
+    "Components/Core/ConfigManager.js",
+    "Components/Core/EventEmitter.js",
+    "Components/Core/Integrations.js",
+    "Components/Core/SharedHelpers.js",
+    "Components/Core/ThemeManager.js",
+    "Components/DataTable/DataTable.html",
+    "Components/DataTable/DataTable.js",
+    "Components/Modal/Modal.html",
+    "Components/Modal/Modal.js",
+    "Components/Pagination/Pagination.html",
+    "Components/Pagination/Pagination.js",
+    "Components/SearchBox/SearchBox.html",
+    "Components/SearchBox/SearchBox.js",
+    "Components/Spinner/Spinner.html",
+    "Components/Spinner/Spinner.js",
+    "Components/Toolbar/Toolbar.html",
+    "Components/Toolbar/Toolbar.js",
+    "Config.js",
+    "Modules/ContractorMaster/ContractorMaster.html",
+    "Modules/ContractorMaster/ContractorMasterSchema.js",
+    "Modules/ContractorMaster/ContractorMasterScript.html",
+    "Modules/ContractorMaster/ContractorMasterService.js",
+    "Modules/ContractorMaster/ContractorMasterValidation.js",
+    "Components/Core/Accessibility.js",
+    "Components/Core/BaseComponent.js",
+    "Components/Core/ComponentFactory.js",
+    "Components/Core/ComponentRegistry.js",
+    "Components/Core/ConfigManager.js",
+    "Components/Core/EventEmitter.js",
+    "Components/Core/Integrations.js",
+    "Components/Core/SharedHelpers.js",
+    "Components/Core/ThemeManager.js",
+    "DashboardService.js",
+    "Database.js",
+    "Components/DataTable/DataTable.html",
+    "Components/DataTable/DataTable.js",
+    "Modules/DepartmentMaster/DepartmentMaster.html",
+    "Modules/DepartmentMaster/DepartmentMasterSchema.js",
+    "Modules/DepartmentMaster/DepartmentMasterScript.html",
+    "Modules/DepartmentMaster/DepartmentMasterService.js",
+    "Modules/DepartmentMaster/DepartmentMasterValidation.js",
+    "Main.html",
+    "Modules/MaterialMaster/MaterialMaster.html",
+    "Modules/MaterialMaster/MaterialMasterSchema.js",
+    "Modules/MaterialMaster/MaterialMasterScript.html",
+    "Modules/MaterialMaster/MaterialMasterService.js",
+    "Modules/MaterialMaster/MaterialMasterValidation.js",
+    "Components/Modal/Modal.html",
+    "Components/Modal/Modal.js",
+    "ModuleLoader.js",
+    "Modules/BankMaster/BankMaster.html",
+    "Modules/BankMaster/BankMasterSchema.js",
+    "Modules/BankMaster/BankMasterScript.html",
+    "Modules/BankMaster/BankMasterService.js",
+    "Modules/BankMaster/BankMasterValidation.js",
+    "Modules/ContractorMaster/ContractorMaster.html",
+    "Modules/ContractorMaster/ContractorMasterSchema.js",
+    "Modules/ContractorMaster/ContractorMasterScript.html",
+    "Modules/ContractorMaster/ContractorMasterService.js",
+    "Modules/ContractorMaster/ContractorMasterValidation.js",
+    "Modules/DepartmentMaster/DepartmentMaster.html",
+    "Modules/DepartmentMaster/DepartmentMasterSchema.js",
+    "Modules/DepartmentMaster/DepartmentMasterScript.html",
+    "Modules/DepartmentMaster/DepartmentMasterService.js",
+    "Modules/DepartmentMaster/DepartmentMasterValidation.js",
+    "Modules/MaterialMaster/MaterialMaster.html",
+    "Modules/MaterialMaster/MaterialMasterSchema.js",
+    "Modules/MaterialMaster/MaterialMasterScript.html",
+    "Modules/MaterialMaster/MaterialMasterService.js",
+    "Modules/MaterialMaster/MaterialMasterValidation.js",
+    "Modules/Settings.html",
+    "Modules/SettingsScript.html",
+    "Modules/Society.html",
+    "Modules/SocietyMaster/SocietyMaster.html",
+    "Modules/SocietyMaster/SocietyMasterSchema.js",
+    "Modules/SocietyMaster/SocietyMasterScript.html",
+    "Modules/SocietyMaster/SocietyMasterService.js",
+    "Modules/SocietyMaster/SocietyMasterValidation.js",
+    "Modules/SocietyScript.html",
+    "Modules/SupplierMaster/SupplierMaster.html",
+    "Modules/SupplierMaster/SupplierMasterSchema.js",
+    "Modules/SupplierMaster/SupplierMasterScript.html",
+    "Modules/SupplierMaster/SupplierMasterService.js",
+    "Modules/SupplierMaster/SupplierMasterValidation.js",
+    "Modules/UnitMaster/UnitMaster.html",
+    "Modules/UnitMaster/UnitMasterSchema.js",
+    "Modules/UnitMaster/UnitMasterScript.html",
+    "Modules/UnitMaster/UnitMasterService.js",
+    "Modules/UnitMaster/UnitMasterValidation.js",
+    "Navbar.html",
+    "Components/Pagination/Pagination.html",
+    "Components/Pagination/Pagination.js",
+    "Response.js",
+    "SchemaService.js",
+    "Components/SearchBox/SearchBox.html",
+    "Components/SearchBox/SearchBox.js",
+    "Modules/Settings.html",
+    "Modules/SettingsScript.html",
+    "SettingsService.js",
+    "Sidebar.html",
+    "Modules/Society.html",
+    "Modules/SocietyMaster/SocietyMaster.html",
+    "Modules/SocietyMaster/SocietyMasterSchema.js",
+    "Modules/SocietyMaster/SocietyMasterScript.html",
+    "Modules/SocietyMaster/SocietyMasterService.js",
+    "Modules/SocietyMaster/SocietyMasterValidation.js",
+    "Modules/SocietyScript.html",
+    "SocietyService.js",
+    "Components/Spinner/Spinner.html",
+    "Components/Spinner/Spinner.js",
+    "Style.html",
+    "Modules/SupplierMaster/SupplierMaster.html",
+    "Modules/SupplierMaster/SupplierMasterSchema.js",
+    "Modules/SupplierMaster/SupplierMasterScript.html",
+    "Modules/SupplierMaster/SupplierMasterService.js",
+    "Modules/SupplierMaster/SupplierMasterValidation.js",
+    "Components/Toolbar/Toolbar.html",
+    "Components/Toolbar/Toolbar.js",
+    "Tools/Build.js",
+    "Tools/Deploy.js",
+    "Tools/DeploymentBuilder.js",
+    "Tools/DeploymentLogger.js",
+    "Tools/DeploymentReporter.js",
+    "Tools/DeploymentUtilities.js",
+    "Tools/DeploymentValidator.js",
+    "Tools/DeploymentVersionManager.js",
+    "Tools/IncludeResolver.js",
+    "Tools/ManifestGenerator.js",
+    "Tools/RollbackManager.js",
+    "Modules/UnitMaster/UnitMaster.html",
+    "Modules/UnitMaster/UnitMasterSchema.js",
+    "Modules/UnitMaster/UnitMasterScript.html",
+    "Modules/UnitMaster/UnitMasterService.js",
+    "Modules/UnitMaster/UnitMasterValidation.js",
+    "Utils.js"
+  ],
+  "edges": [
+    {
+      "from": "Modules/BankMaster/BankMaster.html",
+      "to": "Modules/BankMaster/BankMasterScript"
+    },
+    {
+      "from": "Code.js",
+      "to": "Main"
+    },
+    {
+      "from": "Modules/ContractorMaster/ContractorMaster.html",
+      "to": "Modules/ContractorMaster/ContractorMasterScript"
+    },
+    {
+      "from": "Modules/DepartmentMaster/DepartmentMaster.html",
+      "to": "Modules/DepartmentMaster/DepartmentMasterScript"
+    },
+    {
+      "from": "Main.html",
+      "to": "Style"
+    },
+    {
+      "from": "Main.html",
+      "to": "Navbar"
+    },
+    {
+      "from": "Main.html",
+      "to": "Sidebar"
+    },
+    {
+      "from": "Modules/MaterialMaster/MaterialMaster.html",
+      "to": "Modules/MaterialMaster/MaterialMasterScript"
+    },
+    {
+      "from": "Modules/BankMaster/BankMaster.html",
+      "to": "Modules/BankMaster/BankMasterScript"
+    },
+    {
+      "from": "Modules/ContractorMaster/ContractorMaster.html",
+      "to": "Modules/ContractorMaster/ContractorMasterScript"
+    },
+    {
+      "from": "Modules/DepartmentMaster/DepartmentMaster.html",
+      "to": "Modules/DepartmentMaster/DepartmentMasterScript"
+    },
+    {
+      "from": "Modules/MaterialMaster/MaterialMaster.html",
+      "to": "Modules/MaterialMaster/MaterialMasterScript"
+    },
+    {
+      "from": "Modules/Settings.html",
+      "to": "Modules/SettingsScript"
+    },
+    {
+      "from": "Modules/Society.html",
+      "to": "Modules/SocietyScript"
+    },
+    {
+      "from": "Modules/SocietyMaster/SocietyMaster.html",
+      "to": "Modules/SocietyMaster/SocietyMasterScript"
+    },
+    {
+      "from": "Modules/SupplierMaster/SupplierMaster.html",
+      "to": "Modules/SupplierMaster/SupplierMasterScript"
+    },
+    {
+      "from": "Modules/UnitMaster/UnitMaster.html",
+      "to": "Modules/UnitMaster/UnitMasterScript"
+    },
+    {
+      "from": "Modules/Settings.html",
+      "to": "Modules/SettingsScript"
+    },
+    {
+      "from": "Modules/Society.html",
+      "to": "Modules/SocietyScript"
+    },
+    {
+      "from": "Modules/SocietyMaster/SocietyMaster.html",
+      "to": "Modules/SocietyMaster/SocietyMasterScript"
+    },
+    {
+      "from": "Modules/SupplierMaster/SupplierMaster.html",
+      "to": "Modules/SupplierMaster/SupplierMasterScript"
+    },
+    {
+      "from": "Tools/DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "Tools/DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "Tools/IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "Tools/IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "Modules/UnitMaster/UnitMaster.html",
+      "to": "Modules/UnitMaster/UnitMasterScript"
+    }
+  ]
+}

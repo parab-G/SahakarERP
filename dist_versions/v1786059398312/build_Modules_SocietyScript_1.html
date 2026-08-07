@@ -1,0 +1,91 @@
+<script>
+  window.SocietyModule = (function () {
+    const fields = [
+      ['Society Name', true], ['Short Name'], ['Registration Number', true], ['Registration Date', false, 'date'],
+      ['Society Type'], ['District'], ['Taluka', true], ['Village', true], ['Office Address', false, 'text', true],
+      ['PIN Code'], ['Mobile No.', true], ['Email', false, 'email'], ['Website'], ['PAN'], ['GSTIN'],
+      ['Professional Tax No.'], ['UDYAM No.'], ['Labour Licence No.'], ['Chairman', true], ['Secretary'],
+      ['Office Assistant'], ['CA Name'], ['Auditor Name'], ['Default Society Account'], ['Active Status', false, 'checkbox'],
+      ['Remarks', false, 'text', true]
+    ];
+    let records = [];
+    let mode = 'add';
+    let selectedId = '';
+    let deleteId = '';
+
+    function byId(id) { return document.getElementById(id); }
+    function showError(message, inModal) {
+      const box = byId(inModal ? 'societyFormError' : 'societyError');
+      box.textContent = message || 'Society data could not be loaded. Please verify the Society Master sheet and try again.';
+      box.classList.remove('society-hidden');
+    }
+    function hideError(inModal) { byId(inModal ? 'societyFormError' : 'societyError').classList.add('society-hidden'); }
+    function toast(message) { const box = byId('societyToast'); box.textContent = message; box.classList.remove('society-hidden'); setTimeout(() => box.classList.add('society-hidden'), 2500); }
+    function setLoading(value) { byId('societyLoader').classList.toggle('society-hidden', !value); }
+    function formValue(field) { const control = byId('societyField_' + field.replace(/[^a-zA-Z0-9]/g, '_')); return control && control.type === 'checkbox' ? control.checked : (control ? control.value : ''); }
+    function buildForm(record, readOnly) {
+      const grid = byId('societyFormGrid'); grid.innerHTML = '';
+      fields.forEach(([field, required, type, full]) => {
+        const wrapper = document.createElement('div'); wrapper.className = 'society-form-group' + (full ? ' full' : '');
+        const label = document.createElement('label'); label.className = 'society-form-label'; label.textContent = field + (required ? ' *' : '');
+        const id = 'societyField_' + field.replace(/[^a-zA-Z0-9]/g, '_');
+        let input;
+        if (type === 'checkbox') { input = document.createElement('input'); input.type = 'checkbox'; input.checked = record && (record[field] === true || String(record[field]).toUpperCase() === 'TRUE'); }
+        else { input = document.createElement(type === 'textarea' ? 'textarea' : 'input'); input.type = type || 'text'; input.value = record && record[field] !== undefined ? record[field] : ''; }
+        input.id = id; input.name = field; input.className = 'society-form-control'; input.disabled = readOnly;
+        wrapper.append(label, input); grid.appendChild(wrapper);
+      });
+    }
+    function openModal(nextMode, record) {
+      mode = nextMode; selectedId = record && record['Society ID'] || '';
+      byId('societyModalTitle').textContent = nextMode === 'add' ? 'Add Society' : (nextMode === 'edit' ? 'Edit Society' : 'View Society');
+      buildForm(record || {}, nextMode === 'view'); hideError(true);
+      byId('societySave').classList.toggle('society-hidden', nextMode === 'view'); byId('societyModal').classList.remove('hidden');
+    }
+    function closeModal() { byId('societyModal').classList.add('hidden'); }
+    function renderTable() {
+      const body = byId('societyTableBody'); body.innerHTML = '';
+      if (!records.length) { body.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--text-secondary)">No societies found.</td></tr>'; return; }
+      records.forEach(record => {
+        const row = document.createElement('tr');
+        const active = record['Active Status'] === true || String(record['Active Status']).toUpperCase() === 'TRUE';
+        row.innerHTML = '<td></td><td><strong></strong></td><td></td><td></td><td></td><td></td><td></td><td><span class="society-status"></span></td><td><div class="society-actions"><button class="society-action" data-action="view" title="View">View</button><button class="society-action" data-action="edit" title="Edit">Edit</button><button class="society-action" data-action="delete" title="Delete">Delete</button></div></td>';
+        const values = [record['Society ID'], record['Society Name'], record['Registration Number'], record.Village, record.Taluka, record.Chairman, record['Mobile No.']];
+        row.querySelectorAll('td').forEach((cell, index) => { if (index < values.length) cell.textContent = values[index] || ''; });
+        const badge = row.querySelector('.society-status'); badge.textContent = active ? 'Active' : 'Inactive'; badge.classList.add(active ? 'active' : 'inactive');
+        row.querySelectorAll('[data-action]').forEach(button => button.addEventListener('click', () => {
+          if (button.dataset.action === 'view') openModal('view', record);
+          if (button.dataset.action === 'edit') openModal('edit', record);
+          if (button.dataset.action === 'delete') deleteSociety(record['Society ID']);
+        }));
+        body.appendChild(row);
+      });
+    }
+    function load(keyword) {
+      setLoading(true); hideError(false);
+      google.script.run.withSuccessHandler(response => { setLoading(false); if (!response || !response.success) { showError(response && response.message); return; } records = response.data || []; renderTable(); }).withFailureHandler(error => { setLoading(false); showError(error && (error.message || String(error))); }).getSocieties(keyword || '');
+    }
+    function collect() { const data = {}; fields.forEach(([field]) => { data[field] = formValue(field); }); return data; }
+    function validationMessage(response) { return response && response.errors ? response.errors.map(error => error.message).join(' ') : (response && response.message); }
+    function save() {
+      hideError(true); const data = collect(); const callback = response => { if (!response || !response.success) { showError(validationMessage(response), true); return; } closeModal(); toast(mode === 'add' ? 'Society added successfully.' : 'Society updated successfully.'); load(byId('societySearch').value); };
+      if (mode === 'edit') google.script.run.withSuccessHandler(callback).withFailureHandler(error => showError(error && error.message, true)).updateSociety(selectedId, data);
+      else google.script.run.withSuccessHandler(callback).withFailureHandler(error => showError(error && error.message, true)).saveSociety(data);
+    }
+    function deleteSociety(id) {
+      deleteId = id; byId('societyConfirm').classList.remove('hidden');
+    }
+    function confirmDelete() {
+      byId('societyConfirm').classList.add('hidden');
+      google.script.run.withSuccessHandler(response => { if (!response || !response.success) { showError(response && response.message); return; } toast('Society deleted successfully.'); load(byId('societySearch').value); }).withFailureHandler(error => showError(error && error.message)).softDeleteSociety(deleteId);
+    }
+    function initialize() {
+      byId('societyAdd').onclick = () => openModal('add'); byId('societyRefresh').onclick = () => load(byId('societySearch').value);
+      byId('societySearch').oninput = event => load(event.target.value); byId('societyModalClose').onclick = closeModal; byId('societyCancel').onclick = closeModal; byId('societySave').onclick = save;
+      byId('societyConfirmCancel').onclick = () => byId('societyConfirm').classList.add('hidden'); byId('societyConfirmDelete').onclick = confirmDelete;
+      load();
+    }
+    return { initialize, load };
+  })();
+  document.addEventListener('DOMContentLoaded', () => window.SocietyModule.initialize());
+</script>

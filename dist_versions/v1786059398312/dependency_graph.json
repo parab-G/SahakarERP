@@ -1,0 +1,1748 @@
+{
+  "nodes": [
+    "Components/Alert/Alert.html",
+    "Components/Alert/Alert.js",
+    "App.html",
+    "Modules/BankMaster/BankMaster.html",
+    "Modules/BankMaster/BankMasterSchema.js",
+    "Modules/BankMaster/BankMasterScript.html",
+    "Modules/BankMaster/BankMasterService.js",
+    "Modules/BankMaster/BankMasterValidation.js",
+    "build/App_html_html.html",
+    "build/App.html",
+    "build/build_App_html_html.html",
+    "build/build_App.html",
+    "build/build_build_App_html_html.html",
+    "build/build_build_Code_js_js.js",
+    "build/build_build_Components_Alert_Alert_html_html_1.html",
+    "build/build_build_Components_Alert_Alert_js_js_1.js",
+    "build/build_build_Components_Card_Card_html_html_1.html",
+    "build/build_build_Components_Card_Card_js_js_1.js",
+    "build/build_build_Components_Core_Accessibility_js_js_1.js",
+    "build/build_build_Components_Core_BaseComponent_js_js_1.js",
+    "build/build_build_Components_Core_ComponentFactory_js_js_1.js",
+    "build/build_build_Components_Core_ComponentRegistry_js_js_1.js",
+    "build/build_build_Components_Core_ConfigManager_js_js_1.js",
+    "build/build_build_Components_Core_EventEmitter_js_js_1.js",
+    "build/build_build_Components_Core_Integrations_js_js_1.js",
+    "build/build_build_Components_Core_SharedHelpers_js_js_1.js",
+    "build/build_build_Components_Core_ThemeManager_js_js_1.js",
+    "build/build_build_Components_DataTable_DataTable_html_html_1.html",
+    "build/build_build_Components_DataTable_DataTable_js_js_1.js",
+    "build/build_build_Components_Modal_Modal_html_html_1.html",
+    "build/build_build_Components_Modal_Modal_js_js_1.js",
+    "build/build_build_Components_Pagination_Pagination_html_html_1.html",
+    "build/build_build_Components_Pagination_Pagination_js_js_1.js",
+    "build/build_build_Components_SearchBox_SearchBox_html_html_1.html",
+    "build/build_build_Components_SearchBox_SearchBox_js_js_1.js",
+    "build/build_build_Components_Spinner_Spinner_html_html_1.html",
+    "build/build_build_Components_Spinner_Spinner_js_js_1.js",
+    "build/build_build_Components_Toolbar_Toolbar_html_html_1.html",
+    "build/build_build_Components_Toolbar_Toolbar_js_js_1.js",
+    "build/build_build_Config_js_js.js",
+    "build/build_build_DashboardService_js_js.js",
+    "build/build_build_Database_js_js.js",
+    "build/build_build_Main_html_html.html",
+    "build/build_build_ModuleLoader_js_js.js",
+    "build/build_build_Modules_BankMaster_BankMaster_html_html_1.html",
+    "build/build_build_Modules_BankMaster_BankMasterSchema_js_js_1.js",
+    "build/build_build_Modules_BankMaster_BankMasterScript_html_html_1.html",
+    "build/build_build_Modules_BankMaster_BankMasterService_js_js_1.js",
+    "build/build_build_Modules_BankMaster_BankMasterValidation_js_js_1.js",
+    "build/build_build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+    "build/build_build_Modules_ContractorMaster_ContractorMasterSchema_js_js_1.js",
+    "build/build_build_Modules_ContractorMaster_ContractorMasterScript_html_html_1.html",
+    "build/build_build_Modules_ContractorMaster_ContractorMasterService_js_js_1.js",
+    "build/build_build_Modules_ContractorMaster_ContractorMasterValidation_js_js_1.js",
+    "build/build_build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+    "build/build_build_Modules_DepartmentMaster_DepartmentMasterSchema_js_js_1.js",
+    "build/build_build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1.html",
+    "build/build_build_Modules_DepartmentMaster_DepartmentMasterService_js_js_1.js",
+    "build/build_build_Modules_DepartmentMaster_DepartmentMasterValidation_js_js_1.js",
+    "build/build_build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+    "build/build_build_Modules_MaterialMaster_MaterialMasterSchema_js_js_1.js",
+    "build/build_build_Modules_MaterialMaster_MaterialMasterScript_html_html_1.html",
+    "build/build_build_Modules_MaterialMaster_MaterialMasterService_js_js_1.js",
+    "build/build_build_Modules_MaterialMaster_MaterialMasterValidation_js_js_1.js",
+    "build/build_build_Modules_Settings_html_html_1.html",
+    "build/build_build_Modules_SettingsScript_html_html_1.html",
+    "build/build_build_Modules_Society_html_html_1.html",
+    "build/build_build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+    "build/build_build_Modules_SocietyMaster_SocietyMasterSchema_js_js_1.js",
+    "build/build_build_Modules_SocietyMaster_SocietyMasterScript_html_html_1.html",
+    "build/build_build_Modules_SocietyMaster_SocietyMasterService_js_js_1.js",
+    "build/build_build_Modules_SocietyMaster_SocietyMasterValidation_js_js_1.js",
+    "build/build_build_Modules_SocietyScript_html_html_1.html",
+    "build/build_build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+    "build/build_build_Modules_SupplierMaster_SupplierMasterSchema_js_js_1.js",
+    "build/build_build_Modules_SupplierMaster_SupplierMasterScript_html_html_1.html",
+    "build/build_build_Modules_SupplierMaster_SupplierMasterService_js_js_1.js",
+    "build/build_build_Modules_SupplierMaster_SupplierMasterValidation_js_js_1.js",
+    "build/build_build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+    "build/build_build_Modules_UnitMaster_UnitMasterSchema_js_js_1.js",
+    "build/build_build_Modules_UnitMaster_UnitMasterScript_html_html_1.html",
+    "build/build_build_Modules_UnitMaster_UnitMasterService_js_js_1.js",
+    "build/build_build_Modules_UnitMaster_UnitMasterValidation_js_js_1.js",
+    "build/build_build_Navbar_html_html.html",
+    "build/build_build_Response_js_js.js",
+    "build/build_build_SchemaService_js_js.js",
+    "build/build_build_SettingsService_js_js.js",
+    "build/build_build_Sidebar_html_html.html",
+    "build/build_build_SocietyService_js_js.js",
+    "build/build_build_Style_html_html.html",
+    "build/build_build_Tools_Build_js_js.js",
+    "build/build_build_Tools_Deploy_js_js.js",
+    "build/build_build_Tools_DeploymentBuilder_js_js.js",
+    "build/build_build_Tools_DeploymentLogger_js_js.js",
+    "build/build_build_Tools_DeploymentReporter_js_js.js",
+    "build/build_build_Tools_DeploymentUtilities_js_js.js",
+    "build/build_build_Tools_DeploymentValidator_js_js.js",
+    "build/build_build_Tools_DeploymentVersionManager_js_js.js",
+    "build/build_build_Tools_IncludeResolver_js_js.js",
+    "build/build_build_Tools_ManifestGenerator_js_js.js",
+    "build/build_build_Tools_RollbackManager_js_js.js",
+    "build/build_build_Utils_js_js.js",
+    "build/build_Code_js_js.js",
+    "build/build_Code.js",
+    "build/build_Components_Alert_Alert_1.html",
+    "build/build_Components_Alert_Alert_1.js",
+    "build/build_Components_Alert_Alert_html_html_1.html",
+    "build/build_Components_Alert_Alert_js_js_1.js",
+    "build/build_Components_Card_Card_1.html",
+    "build/build_Components_Card_Card_1.js",
+    "build/build_Components_Card_Card_html_html_1.html",
+    "build/build_Components_Card_Card_js_js_1.js",
+    "build/build_Components_Core_Accessibility_1.js",
+    "build/build_Components_Core_Accessibility_js_js_1.js",
+    "build/build_Components_Core_BaseComponent_1.js",
+    "build/build_Components_Core_BaseComponent_js_js_1.js",
+    "build/build_Components_Core_ComponentFactory_1.js",
+    "build/build_Components_Core_ComponentFactory_js_js_1.js",
+    "build/build_Components_Core_ComponentRegistry_1.js",
+    "build/build_Components_Core_ComponentRegistry_js_js_1.js",
+    "build/build_Components_Core_ConfigManager_1.js",
+    "build/build_Components_Core_ConfigManager_js_js_1.js",
+    "build/build_Components_Core_EventEmitter_1.js",
+    "build/build_Components_Core_EventEmitter_js_js_1.js",
+    "build/build_Components_Core_Integrations_1.js",
+    "build/build_Components_Core_Integrations_js_js_1.js",
+    "build/build_Components_Core_SharedHelpers_1.js",
+    "build/build_Components_Core_SharedHelpers_js_js_1.js",
+    "build/build_Components_Core_ThemeManager_1.js",
+    "build/build_Components_Core_ThemeManager_js_js_1.js",
+    "build/build_Components_DataTable_DataTable_1.html",
+    "build/build_Components_DataTable_DataTable_1.js",
+    "build/build_Components_DataTable_DataTable_html_html_1.html",
+    "build/build_Components_DataTable_DataTable_js_js_1.js",
+    "build/build_Components_Modal_Modal_1.html",
+    "build/build_Components_Modal_Modal_1.js",
+    "build/build_Components_Modal_Modal_html_html_1.html",
+    "build/build_Components_Modal_Modal_js_js_1.js",
+    "build/build_Components_Pagination_Pagination_1.html",
+    "build/build_Components_Pagination_Pagination_1.js",
+    "build/build_Components_Pagination_Pagination_html_html_1.html",
+    "build/build_Components_Pagination_Pagination_js_js_1.js",
+    "build/build_Components_SearchBox_SearchBox_1.html",
+    "build/build_Components_SearchBox_SearchBox_1.js",
+    "build/build_Components_SearchBox_SearchBox_html_html_1.html",
+    "build/build_Components_SearchBox_SearchBox_js_js_1.js",
+    "build/build_Components_Spinner_Spinner_1.html",
+    "build/build_Components_Spinner_Spinner_1.js",
+    "build/build_Components_Spinner_Spinner_html_html_1.html",
+    "build/build_Components_Spinner_Spinner_js_js_1.js",
+    "build/build_Components_Toolbar_Toolbar_1.html",
+    "build/build_Components_Toolbar_Toolbar_1.js",
+    "build/build_Components_Toolbar_Toolbar_html_html_1.html",
+    "build/build_Components_Toolbar_Toolbar_js_js_1.js",
+    "build/build_Config_js_js.js",
+    "build/build_Config.js",
+    "build/build_DashboardService_js_js.js",
+    "build/build_DashboardService.js",
+    "build/build_Database_js_js.js",
+    "build/build_Database.js",
+    "build/build_Main_html_html.html",
+    "build/build_Main.html",
+    "build/build_ModuleLoader_js_js.js",
+    "build/build_ModuleLoader.js",
+    "build/build_Modules_BankMaster_BankMaster_1.html",
+    "build/build_Modules_BankMaster_BankMaster_html_html_1.html",
+    "build/build_Modules_BankMaster_BankMasterSchema_1.js",
+    "build/build_Modules_BankMaster_BankMasterSchema_js_js_1.js",
+    "build/build_Modules_BankMaster_BankMasterScript_1.html",
+    "build/build_Modules_BankMaster_BankMasterScript_html_html_1.html",
+    "build/build_Modules_BankMaster_BankMasterService_1.js",
+    "build/build_Modules_BankMaster_BankMasterService_js_js_1.js",
+    "build/build_Modules_BankMaster_BankMasterValidation_1.js",
+    "build/build_Modules_BankMaster_BankMasterValidation_js_js_1.js",
+    "build/build_Modules_ContractorMaster_ContractorMaster_1.html",
+    "build/build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+    "build/build_Modules_ContractorMaster_ContractorMasterSchema_1.js",
+    "build/build_Modules_ContractorMaster_ContractorMasterSchema_js_js_1.js",
+    "build/build_Modules_ContractorMaster_ContractorMasterScript_1.html",
+    "build/build_Modules_ContractorMaster_ContractorMasterScript_html_html_1.html",
+    "build/build_Modules_ContractorMaster_ContractorMasterService_1.js",
+    "build/build_Modules_ContractorMaster_ContractorMasterService_js_js_1.js",
+    "build/build_Modules_ContractorMaster_ContractorMasterValidation_1.js",
+    "build/build_Modules_ContractorMaster_ContractorMasterValidation_js_js_1.js",
+    "build/build_Modules_DepartmentMaster_DepartmentMaster_1.html",
+    "build/build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterSchema_1.js",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterSchema_js_js_1.js",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterScript_1.html",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1.html",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterService_1.js",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterService_js_js_1.js",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterValidation_1.js",
+    "build/build_Modules_DepartmentMaster_DepartmentMasterValidation_js_js_1.js",
+    "build/build_Modules_MaterialMaster_MaterialMaster_1.html",
+    "build/build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+    "build/build_Modules_MaterialMaster_MaterialMasterSchema_1.js",
+    "build/build_Modules_MaterialMaster_MaterialMasterSchema_js_js_1.js",
+    "build/build_Modules_MaterialMaster_MaterialMasterScript_1.html",
+    "build/build_Modules_MaterialMaster_MaterialMasterScript_html_html_1.html",
+    "build/build_Modules_MaterialMaster_MaterialMasterService_1.js",
+    "build/build_Modules_MaterialMaster_MaterialMasterService_js_js_1.js",
+    "build/build_Modules_MaterialMaster_MaterialMasterValidation_1.js",
+    "build/build_Modules_MaterialMaster_MaterialMasterValidation_js_js_1.js",
+    "build/build_Modules_Settings_1.html",
+    "build/build_Modules_Settings_html_html_1.html",
+    "build/build_Modules_SettingsScript_1.html",
+    "build/build_Modules_SettingsScript_html_html_1.html",
+    "build/build_Modules_Society_1.html",
+    "build/build_Modules_Society_html_html_1.html",
+    "build/build_Modules_SocietyMaster_SocietyMaster_1.html",
+    "build/build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+    "build/build_Modules_SocietyMaster_SocietyMasterSchema_1.js",
+    "build/build_Modules_SocietyMaster_SocietyMasterSchema_js_js_1.js",
+    "build/build_Modules_SocietyMaster_SocietyMasterScript_1.html",
+    "build/build_Modules_SocietyMaster_SocietyMasterScript_html_html_1.html",
+    "build/build_Modules_SocietyMaster_SocietyMasterService_1.js",
+    "build/build_Modules_SocietyMaster_SocietyMasterService_js_js_1.js",
+    "build/build_Modules_SocietyMaster_SocietyMasterValidation_1.js",
+    "build/build_Modules_SocietyMaster_SocietyMasterValidation_js_js_1.js",
+    "build/build_Modules_SocietyScript_1.html",
+    "build/build_Modules_SocietyScript_html_html_1.html",
+    "build/build_Modules_SupplierMaster_SupplierMaster_1.html",
+    "build/build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+    "build/build_Modules_SupplierMaster_SupplierMasterSchema_1.js",
+    "build/build_Modules_SupplierMaster_SupplierMasterSchema_js_js_1.js",
+    "build/build_Modules_SupplierMaster_SupplierMasterScript_1.html",
+    "build/build_Modules_SupplierMaster_SupplierMasterScript_html_html_1.html",
+    "build/build_Modules_SupplierMaster_SupplierMasterService_1.js",
+    "build/build_Modules_SupplierMaster_SupplierMasterService_js_js_1.js",
+    "build/build_Modules_SupplierMaster_SupplierMasterValidation_1.js",
+    "build/build_Modules_SupplierMaster_SupplierMasterValidation_js_js_1.js",
+    "build/build_Modules_UnitMaster_UnitMaster_1.html",
+    "build/build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+    "build/build_Modules_UnitMaster_UnitMasterSchema_1.js",
+    "build/build_Modules_UnitMaster_UnitMasterSchema_js_js_1.js",
+    "build/build_Modules_UnitMaster_UnitMasterScript_1.html",
+    "build/build_Modules_UnitMaster_UnitMasterScript_html_html_1.html",
+    "build/build_Modules_UnitMaster_UnitMasterService_1.js",
+    "build/build_Modules_UnitMaster_UnitMasterService_js_js_1.js",
+    "build/build_Modules_UnitMaster_UnitMasterValidation_1.js",
+    "build/build_Modules_UnitMaster_UnitMasterValidation_js_js_1.js",
+    "build/build_Navbar_html_html.html",
+    "build/build_Navbar.html",
+    "build/build_Response_js_js.js",
+    "build/build_Response.js",
+    "build/build_SchemaService_js_js.js",
+    "build/build_SchemaService.js",
+    "build/build_SettingsService_js_js.js",
+    "build/build_SettingsService.js",
+    "build/build_Sidebar_html_html.html",
+    "build/build_Sidebar.html",
+    "build/build_SocietyService_js_js.js",
+    "build/build_SocietyService.js",
+    "build/build_Style_html_html.html",
+    "build/build_Style.html",
+    "build/build_Tools_Build_js_js.js",
+    "build/build_Tools_Build.js",
+    "build/build_Tools_Deploy_js_js.js",
+    "build/build_Tools_Deploy.js",
+    "build/build_Tools_DeploymentBuilder_js_js.js",
+    "build/build_Tools_DeploymentBuilder.js",
+    "build/build_Tools_DeploymentLogger_js_js.js",
+    "build/build_Tools_DeploymentLogger.js",
+    "build/build_Tools_DeploymentReporter_js_js.js",
+    "build/build_Tools_DeploymentReporter.js",
+    "build/build_Tools_DeploymentUtilities_js_js.js",
+    "build/build_Tools_DeploymentUtilities.js",
+    "build/build_Tools_DeploymentValidator_js_js.js",
+    "build/build_Tools_DeploymentValidator.js",
+    "build/build_Tools_DeploymentVersionManager_js_js.js",
+    "build/build_Tools_DeploymentVersionManager.js",
+    "build/build_Tools_IncludeResolver_js_js.js",
+    "build/build_Tools_IncludeResolver.js",
+    "build/build_Tools_ManifestGenerator_js_js.js",
+    "build/build_Tools_ManifestGenerator.js",
+    "build/build_Tools_RollbackManager_js_js.js",
+    "build/build_Tools_RollbackManager.js",
+    "build/build_Utils_js_js.js",
+    "build/build_Utils.js",
+    "build/Code_js_js.js",
+    "build/Code.js",
+    "build/Components_Alert_Alert_1.html",
+    "build/Components_Alert_Alert_1.js",
+    "build/Components_Alert_Alert_html_html_1.html",
+    "build/Components_Alert_Alert_js_js_1.js",
+    "build/Components_Card_Card_1.html",
+    "build/Components_Card_Card_1.js",
+    "build/Components_Card_Card_html_html_1.html",
+    "build/Components_Card_Card_js_js_1.js",
+    "build/Components_Core_Accessibility_1.js",
+    "build/Components_Core_Accessibility_js_js_1.js",
+    "build/Components_Core_BaseComponent_1.js",
+    "build/Components_Core_BaseComponent_js_js_1.js",
+    "build/Components_Core_ComponentFactory_1.js",
+    "build/Components_Core_ComponentFactory_js_js_1.js",
+    "build/Components_Core_ComponentRegistry_1.js",
+    "build/Components_Core_ComponentRegistry_js_js_1.js",
+    "build/Components_Core_ConfigManager_1.js",
+    "build/Components_Core_ConfigManager_js_js_1.js",
+    "build/Components_Core_EventEmitter_1.js",
+    "build/Components_Core_EventEmitter_js_js_1.js",
+    "build/Components_Core_Integrations_1.js",
+    "build/Components_Core_Integrations_js_js_1.js",
+    "build/Components_Core_SharedHelpers_1.js",
+    "build/Components_Core_SharedHelpers_js_js_1.js",
+    "build/Components_Core_ThemeManager_1.js",
+    "build/Components_Core_ThemeManager_js_js_1.js",
+    "build/Components_DataTable_DataTable_1.html",
+    "build/Components_DataTable_DataTable_1.js",
+    "build/Components_DataTable_DataTable_html_html_1.html",
+    "build/Components_DataTable_DataTable_js_js_1.js",
+    "build/Components_Modal_Modal_1.html",
+    "build/Components_Modal_Modal_1.js",
+    "build/Components_Modal_Modal_html_html_1.html",
+    "build/Components_Modal_Modal_js_js_1.js",
+    "build/Components_Pagination_Pagination_1.html",
+    "build/Components_Pagination_Pagination_1.js",
+    "build/Components_Pagination_Pagination_html_html_1.html",
+    "build/Components_Pagination_Pagination_js_js_1.js",
+    "build/Components_SearchBox_SearchBox_1.html",
+    "build/Components_SearchBox_SearchBox_1.js",
+    "build/Components_SearchBox_SearchBox_html_html_1.html",
+    "build/Components_SearchBox_SearchBox_js_js_1.js",
+    "build/Components_Spinner_Spinner_1.html",
+    "build/Components_Spinner_Spinner_1.js",
+    "build/Components_Spinner_Spinner_html_html_1.html",
+    "build/Components_Spinner_Spinner_js_js_1.js",
+    "build/Components_Toolbar_Toolbar_1.html",
+    "build/Components_Toolbar_Toolbar_1.js",
+    "build/Components_Toolbar_Toolbar_html_html_1.html",
+    "build/Components_Toolbar_Toolbar_js_js_1.js",
+    "build/Config_js_js.js",
+    "build/Config.js",
+    "build/DashboardService_js_js.js",
+    "build/DashboardService.js",
+    "build/Database_js_js.js",
+    "build/Database.js",
+    "build/Main_html_html.html",
+    "build/Main.html",
+    "build/ModuleLoader_js_js.js",
+    "build/ModuleLoader.js",
+    "build/Modules_BankMaster_BankMaster_1.html",
+    "build/Modules_BankMaster_BankMaster_html_html_1.html",
+    "build/Modules_BankMaster_BankMasterSchema_1.js",
+    "build/Modules_BankMaster_BankMasterSchema_js_js_1.js",
+    "build/Modules_BankMaster_BankMasterScript_1.html",
+    "build/Modules_BankMaster_BankMasterScript_html_html_1.html",
+    "build/Modules_BankMaster_BankMasterService_1.js",
+    "build/Modules_BankMaster_BankMasterService_js_js_1.js",
+    "build/Modules_BankMaster_BankMasterValidation_1.js",
+    "build/Modules_BankMaster_BankMasterValidation_js_js_1.js",
+    "build/Modules_ContractorMaster_ContractorMaster_1.html",
+    "build/Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+    "build/Modules_ContractorMaster_ContractorMasterSchema_1.js",
+    "build/Modules_ContractorMaster_ContractorMasterSchema_js_js_1.js",
+    "build/Modules_ContractorMaster_ContractorMasterScript_1.html",
+    "build/Modules_ContractorMaster_ContractorMasterScript_html_html_1.html",
+    "build/Modules_ContractorMaster_ContractorMasterService_1.js",
+    "build/Modules_ContractorMaster_ContractorMasterService_js_js_1.js",
+    "build/Modules_ContractorMaster_ContractorMasterValidation_1.js",
+    "build/Modules_ContractorMaster_ContractorMasterValidation_js_js_1.js",
+    "build/Modules_DepartmentMaster_DepartmentMaster_1.html",
+    "build/Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+    "build/Modules_DepartmentMaster_DepartmentMasterSchema_1.js",
+    "build/Modules_DepartmentMaster_DepartmentMasterSchema_js_js_1.js",
+    "build/Modules_DepartmentMaster_DepartmentMasterScript_1.html",
+    "build/Modules_DepartmentMaster_DepartmentMasterScript_html_html_1.html",
+    "build/Modules_DepartmentMaster_DepartmentMasterService_1.js",
+    "build/Modules_DepartmentMaster_DepartmentMasterService_js_js_1.js",
+    "build/Modules_DepartmentMaster_DepartmentMasterValidation_1.js",
+    "build/Modules_DepartmentMaster_DepartmentMasterValidation_js_js_1.js",
+    "build/Modules_MaterialMaster_MaterialMaster_1.html",
+    "build/Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+    "build/Modules_MaterialMaster_MaterialMasterSchema_1.js",
+    "build/Modules_MaterialMaster_MaterialMasterSchema_js_js_1.js",
+    "build/Modules_MaterialMaster_MaterialMasterScript_1.html",
+    "build/Modules_MaterialMaster_MaterialMasterScript_html_html_1.html",
+    "build/Modules_MaterialMaster_MaterialMasterService_1.js",
+    "build/Modules_MaterialMaster_MaterialMasterService_js_js_1.js",
+    "build/Modules_MaterialMaster_MaterialMasterValidation_1.js",
+    "build/Modules_MaterialMaster_MaterialMasterValidation_js_js_1.js",
+    "build/Modules_Settings_1.html",
+    "build/Modules_Settings_html_html_1.html",
+    "build/Modules_SettingsScript_1.html",
+    "build/Modules_SettingsScript_html_html_1.html",
+    "build/Modules_Society_1.html",
+    "build/Modules_Society_html_html_1.html",
+    "build/Modules_SocietyMaster_SocietyMaster_1.html",
+    "build/Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+    "build/Modules_SocietyMaster_SocietyMasterSchema_1.js",
+    "build/Modules_SocietyMaster_SocietyMasterSchema_js_js_1.js",
+    "build/Modules_SocietyMaster_SocietyMasterScript_1.html",
+    "build/Modules_SocietyMaster_SocietyMasterScript_html_html_1.html",
+    "build/Modules_SocietyMaster_SocietyMasterService_1.js",
+    "build/Modules_SocietyMaster_SocietyMasterService_js_js_1.js",
+    "build/Modules_SocietyMaster_SocietyMasterValidation_1.js",
+    "build/Modules_SocietyMaster_SocietyMasterValidation_js_js_1.js",
+    "build/Modules_SocietyScript_1.html",
+    "build/Modules_SocietyScript_html_html_1.html",
+    "build/Modules_SupplierMaster_SupplierMaster_1.html",
+    "build/Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+    "build/Modules_SupplierMaster_SupplierMasterSchema_1.js",
+    "build/Modules_SupplierMaster_SupplierMasterSchema_js_js_1.js",
+    "build/Modules_SupplierMaster_SupplierMasterScript_1.html",
+    "build/Modules_SupplierMaster_SupplierMasterScript_html_html_1.html",
+    "build/Modules_SupplierMaster_SupplierMasterService_1.js",
+    "build/Modules_SupplierMaster_SupplierMasterService_js_js_1.js",
+    "build/Modules_SupplierMaster_SupplierMasterValidation_1.js",
+    "build/Modules_SupplierMaster_SupplierMasterValidation_js_js_1.js",
+    "build/Modules_UnitMaster_UnitMaster_1.html",
+    "build/Modules_UnitMaster_UnitMaster_html_html_1.html",
+    "build/Modules_UnitMaster_UnitMasterSchema_1.js",
+    "build/Modules_UnitMaster_UnitMasterSchema_js_js_1.js",
+    "build/Modules_UnitMaster_UnitMasterScript_1.html",
+    "build/Modules_UnitMaster_UnitMasterScript_html_html_1.html",
+    "build/Modules_UnitMaster_UnitMasterService_1.js",
+    "build/Modules_UnitMaster_UnitMasterService_js_js_1.js",
+    "build/Modules_UnitMaster_UnitMasterValidation_1.js",
+    "build/Modules_UnitMaster_UnitMasterValidation_js_js_1.js",
+    "build/Navbar_html_html.html",
+    "build/Navbar.html",
+    "build/Response_js_js.js",
+    "build/Response.js",
+    "build/SchemaService_js_js.js",
+    "build/SchemaService.js",
+    "build/SettingsService_js_js.js",
+    "build/SettingsService.js",
+    "build/Sidebar_html_html.html",
+    "build/Sidebar.html",
+    "build/SocietyService_js_js.js",
+    "build/SocietyService.js",
+    "build/Style_html_html.html",
+    "build/Style.html",
+    "build/Tools_Build_js_js.js",
+    "build/Tools_Build.js",
+    "build/Tools_Deploy_js_js.js",
+    "build/Tools_Deploy.js",
+    "build/Tools_DeploymentBuilder_js_js.js",
+    "build/Tools_DeploymentBuilder.js",
+    "build/Tools_DeploymentLogger_js_js.js",
+    "build/Tools_DeploymentLogger.js",
+    "build/Tools_DeploymentReporter_js_js.js",
+    "build/Tools_DeploymentReporter.js",
+    "build/Tools_DeploymentUtilities_js_js.js",
+    "build/Tools_DeploymentUtilities.js",
+    "build/Tools_DeploymentValidator_js_js.js",
+    "build/Tools_DeploymentValidator.js",
+    "build/Tools_DeploymentVersionManager_js_js.js",
+    "build/Tools_DeploymentVersionManager.js",
+    "build/Tools_IncludeResolver_js_js.js",
+    "build/Tools_IncludeResolver.js",
+    "build/Tools_ManifestGenerator_js_js.js",
+    "build/Tools_ManifestGenerator.js",
+    "build/Tools_RollbackManager_js_js.js",
+    "build/Tools_RollbackManager.js",
+    "build/Utils_js_js.js",
+    "build/Utils.js",
+    "Components/Card/Card.html",
+    "Components/Card/Card.js",
+    "Code.js",
+    "Components/Alert/Alert.html",
+    "Components/Alert/Alert.js",
+    "Components/Card/Card.html",
+    "Components/Card/Card.js",
+    "Components/Core/Accessibility.js",
+    "Components/Core/BaseComponent.js",
+    "Components/Core/ComponentFactory.js",
+    "Components/Core/ComponentRegistry.js",
+    "Components/Core/ConfigManager.js",
+    "Components/Core/EventEmitter.js",
+    "Components/Core/Integrations.js",
+    "Components/Core/SharedHelpers.js",
+    "Components/Core/ThemeManager.js",
+    "Components/DataTable/DataTable.html",
+    "Components/DataTable/DataTable.js",
+    "Components/Modal/Modal.html",
+    "Components/Modal/Modal.js",
+    "Components/Pagination/Pagination.html",
+    "Components/Pagination/Pagination.js",
+    "Components/SearchBox/SearchBox.html",
+    "Components/SearchBox/SearchBox.js",
+    "Components/Spinner/Spinner.html",
+    "Components/Spinner/Spinner.js",
+    "Components/Toolbar/Toolbar.html",
+    "Components/Toolbar/Toolbar.js",
+    "Config.js",
+    "Modules/ContractorMaster/ContractorMaster.html",
+    "Modules/ContractorMaster/ContractorMasterSchema.js",
+    "Modules/ContractorMaster/ContractorMasterScript.html",
+    "Modules/ContractorMaster/ContractorMasterService.js",
+    "Modules/ContractorMaster/ContractorMasterValidation.js",
+    "Components/Core/Accessibility.js",
+    "Components/Core/BaseComponent.js",
+    "Components/Core/ComponentFactory.js",
+    "Components/Core/ComponentRegistry.js",
+    "Components/Core/ConfigManager.js",
+    "Components/Core/EventEmitter.js",
+    "Components/Core/Integrations.js",
+    "Components/Core/SharedHelpers.js",
+    "Components/Core/ThemeManager.js",
+    "DashboardService.js",
+    "Database.js",
+    "Components/DataTable/DataTable.html",
+    "Components/DataTable/DataTable.js",
+    "Modules/DepartmentMaster/DepartmentMaster.html",
+    "Modules/DepartmentMaster/DepartmentMasterSchema.js",
+    "Modules/DepartmentMaster/DepartmentMasterScript.html",
+    "Modules/DepartmentMaster/DepartmentMasterService.js",
+    "Modules/DepartmentMaster/DepartmentMasterValidation.js",
+    "dist_versions/v1786059321331/App_html_html.html",
+    "dist_versions/v1786059321331/App.html",
+    "dist_versions/v1786059321331/build_App_html_html.html",
+    "dist_versions/v1786059321331/build_App.html",
+    "dist_versions/v1786059321331/build_build_App_html_html.html",
+    "dist_versions/v1786059321331/build_build_Code_js_js.js",
+    "dist_versions/v1786059321331/build_build_Components_Alert_Alert_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_Alert_Alert_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Card_Card_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_Card_Card_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_Accessibility_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_BaseComponent_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_ComponentFactory_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_ComponentRegistry_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_ConfigManager_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_EventEmitter_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_Integrations_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_SharedHelpers_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Core_ThemeManager_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_DataTable_DataTable_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_DataTable_DataTable_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Modal_Modal_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_Modal_Modal_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Pagination_Pagination_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_Pagination_Pagination_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_SearchBox_SearchBox_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_SearchBox_SearchBox_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Spinner_Spinner_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_Spinner_Spinner_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Components_Toolbar_Toolbar_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Components_Toolbar_Toolbar_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Config_js_js.js",
+    "dist_versions/v1786059321331/build_build_DashboardService_js_js.js",
+    "dist_versions/v1786059321331/build_build_Database_js_js.js",
+    "dist_versions/v1786059321331/build_build_Main_html_html.html",
+    "dist_versions/v1786059321331/build_build_ModuleLoader_js_js.js",
+    "dist_versions/v1786059321331/build_build_Modules_BankMaster_BankMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_BankMaster_BankMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_BankMaster_BankMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_BankMaster_BankMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_BankMaster_BankMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_ContractorMaster_ContractorMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_ContractorMaster_ContractorMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_ContractorMaster_ContractorMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_ContractorMaster_ContractorMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_DepartmentMaster_DepartmentMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_DepartmentMaster_DepartmentMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_DepartmentMaster_DepartmentMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_MaterialMaster_MaterialMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_MaterialMaster_MaterialMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_MaterialMaster_MaterialMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_MaterialMaster_MaterialMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_Settings_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_SettingsScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_Society_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_SocietyMaster_SocietyMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_SocietyMaster_SocietyMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_SocietyMaster_SocietyMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_SocietyMaster_SocietyMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_SocietyScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_SupplierMaster_SupplierMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_SupplierMaster_SupplierMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_SupplierMaster_SupplierMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_SupplierMaster_SupplierMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_UnitMaster_UnitMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_UnitMaster_UnitMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_build_Modules_UnitMaster_UnitMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Modules_UnitMaster_UnitMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_build_Navbar_html_html.html",
+    "dist_versions/v1786059321331/build_build_Response_js_js.js",
+    "dist_versions/v1786059321331/build_build_SchemaService_js_js.js",
+    "dist_versions/v1786059321331/build_build_SettingsService_js_js.js",
+    "dist_versions/v1786059321331/build_build_Sidebar_html_html.html",
+    "dist_versions/v1786059321331/build_build_SocietyService_js_js.js",
+    "dist_versions/v1786059321331/build_build_Style_html_html.html",
+    "dist_versions/v1786059321331/build_build_Tools_Build_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_Deploy_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_DeploymentBuilder_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_DeploymentLogger_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_DeploymentReporter_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_DeploymentUtilities_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_DeploymentValidator_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_DeploymentVersionManager_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_IncludeResolver_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_ManifestGenerator_js_js.js",
+    "dist_versions/v1786059321331/build_build_Tools_RollbackManager_js_js.js",
+    "dist_versions/v1786059321331/build_build_Utils_js_js.js",
+    "dist_versions/v1786059321331/build_Code_js_js.js",
+    "dist_versions/v1786059321331/build_Code.js",
+    "dist_versions/v1786059321331/build_Components_Alert_Alert_1.html",
+    "dist_versions/v1786059321331/build_Components_Alert_Alert_1.js",
+    "dist_versions/v1786059321331/build_Components_Alert_Alert_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_Alert_Alert_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Card_Card_1.html",
+    "dist_versions/v1786059321331/build_Components_Card_Card_1.js",
+    "dist_versions/v1786059321331/build_Components_Card_Card_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_Card_Card_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_Accessibility_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_Accessibility_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_BaseComponent_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_BaseComponent_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ComponentFactory_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ComponentFactory_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ComponentRegistry_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ComponentRegistry_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ConfigManager_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ConfigManager_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_EventEmitter_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_EventEmitter_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_Integrations_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_Integrations_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_SharedHelpers_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_SharedHelpers_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ThemeManager_1.js",
+    "dist_versions/v1786059321331/build_Components_Core_ThemeManager_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_DataTable_DataTable_1.html",
+    "dist_versions/v1786059321331/build_Components_DataTable_DataTable_1.js",
+    "dist_versions/v1786059321331/build_Components_DataTable_DataTable_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_DataTable_DataTable_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Modal_Modal_1.html",
+    "dist_versions/v1786059321331/build_Components_Modal_Modal_1.js",
+    "dist_versions/v1786059321331/build_Components_Modal_Modal_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_Modal_Modal_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Pagination_Pagination_1.html",
+    "dist_versions/v1786059321331/build_Components_Pagination_Pagination_1.js",
+    "dist_versions/v1786059321331/build_Components_Pagination_Pagination_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_Pagination_Pagination_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_SearchBox_SearchBox_1.html",
+    "dist_versions/v1786059321331/build_Components_SearchBox_SearchBox_1.js",
+    "dist_versions/v1786059321331/build_Components_SearchBox_SearchBox_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_SearchBox_SearchBox_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Spinner_Spinner_1.html",
+    "dist_versions/v1786059321331/build_Components_Spinner_Spinner_1.js",
+    "dist_versions/v1786059321331/build_Components_Spinner_Spinner_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_Spinner_Spinner_js_js_1.js",
+    "dist_versions/v1786059321331/build_Components_Toolbar_Toolbar_1.html",
+    "dist_versions/v1786059321331/build_Components_Toolbar_Toolbar_1.js",
+    "dist_versions/v1786059321331/build_Components_Toolbar_Toolbar_html_html_1.html",
+    "dist_versions/v1786059321331/build_Components_Toolbar_Toolbar_js_js_1.js",
+    "dist_versions/v1786059321331/build_Config_js_js.js",
+    "dist_versions/v1786059321331/build_Config.js",
+    "dist_versions/v1786059321331/build_DashboardService_js_js.js",
+    "dist_versions/v1786059321331/build_DashboardService.js",
+    "dist_versions/v1786059321331/build_Database_js_js.js",
+    "dist_versions/v1786059321331/build_Database.js",
+    "dist_versions/v1786059321331/build_Main_html_html.html",
+    "dist_versions/v1786059321331/build_Main.html",
+    "dist_versions/v1786059321331/build_ModuleLoader_js_js.js",
+    "dist_versions/v1786059321331/build_ModuleLoader.js",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMaster_1.html",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterSchema_1.js",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterService_1.js",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterValidation_1.js",
+    "dist_versions/v1786059321331/build_Modules_BankMaster_BankMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMaster_1.html",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterSchema_1.js",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterService_1.js",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterValidation_1.js",
+    "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMaster_1.html",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterSchema_1.js",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterService_1.js",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterValidation_1.js",
+    "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMaster_1.html",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterSchema_1.js",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterService_1.js",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterValidation_1.js",
+    "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_Settings_1.html",
+    "dist_versions/v1786059321331/build_Modules_Settings_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_SettingsScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_SettingsScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_Society_1.html",
+    "dist_versions/v1786059321331/build_Modules_Society_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMaster_1.html",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterSchema_1.js",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterService_1.js",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterValidation_1.js",
+    "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_SocietyScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_SocietyScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMaster_1.html",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterSchema_1.js",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterService_1.js",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterValidation_1.js",
+    "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMaster_1.html",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterSchema_1.js",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterScript_1.html",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterService_1.js",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterValidation_1.js",
+    "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/build_Navbar_html_html.html",
+    "dist_versions/v1786059321331/build_Navbar.html",
+    "dist_versions/v1786059321331/build_Response_js_js.js",
+    "dist_versions/v1786059321331/build_Response.js",
+    "dist_versions/v1786059321331/build_SchemaService_js_js.js",
+    "dist_versions/v1786059321331/build_SchemaService.js",
+    "dist_versions/v1786059321331/build_SettingsService_js_js.js",
+    "dist_versions/v1786059321331/build_SettingsService.js",
+    "dist_versions/v1786059321331/build_Sidebar_html_html.html",
+    "dist_versions/v1786059321331/build_Sidebar.html",
+    "dist_versions/v1786059321331/build_SocietyService_js_js.js",
+    "dist_versions/v1786059321331/build_SocietyService.js",
+    "dist_versions/v1786059321331/build_Style_html_html.html",
+    "dist_versions/v1786059321331/build_Style.html",
+    "dist_versions/v1786059321331/build_Tools_Build_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_Build.js",
+    "dist_versions/v1786059321331/build_Tools_Deploy_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_Deploy.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentBuilder_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentBuilder.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentLogger_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentLogger.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentReporter_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentReporter.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentUtilities_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentUtilities.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentValidator_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentValidator.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentVersionManager_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_DeploymentVersionManager.js",
+    "dist_versions/v1786059321331/build_Tools_IncludeResolver_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_IncludeResolver.js",
+    "dist_versions/v1786059321331/build_Tools_ManifestGenerator_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_ManifestGenerator.js",
+    "dist_versions/v1786059321331/build_Tools_RollbackManager_js_js.js",
+    "dist_versions/v1786059321331/build_Tools_RollbackManager.js",
+    "dist_versions/v1786059321331/build_Utils_js_js.js",
+    "dist_versions/v1786059321331/build_Utils.js",
+    "dist_versions/v1786059321331/Code_js_js.js",
+    "dist_versions/v1786059321331/Code.js",
+    "dist_versions/v1786059321331/Components_Alert_Alert_1.html",
+    "dist_versions/v1786059321331/Components_Alert_Alert_1.js",
+    "dist_versions/v1786059321331/Components_Alert_Alert_html_html_1.html",
+    "dist_versions/v1786059321331/Components_Alert_Alert_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Card_Card_1.html",
+    "dist_versions/v1786059321331/Components_Card_Card_1.js",
+    "dist_versions/v1786059321331/Components_Card_Card_html_html_1.html",
+    "dist_versions/v1786059321331/Components_Card_Card_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_Accessibility_1.js",
+    "dist_versions/v1786059321331/Components_Core_Accessibility_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_BaseComponent_1.js",
+    "dist_versions/v1786059321331/Components_Core_BaseComponent_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_ComponentFactory_1.js",
+    "dist_versions/v1786059321331/Components_Core_ComponentFactory_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_ComponentRegistry_1.js",
+    "dist_versions/v1786059321331/Components_Core_ComponentRegistry_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_ConfigManager_1.js",
+    "dist_versions/v1786059321331/Components_Core_ConfigManager_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_EventEmitter_1.js",
+    "dist_versions/v1786059321331/Components_Core_EventEmitter_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_Integrations_1.js",
+    "dist_versions/v1786059321331/Components_Core_Integrations_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_SharedHelpers_1.js",
+    "dist_versions/v1786059321331/Components_Core_SharedHelpers_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Core_ThemeManager_1.js",
+    "dist_versions/v1786059321331/Components_Core_ThemeManager_js_js_1.js",
+    "dist_versions/v1786059321331/Components_DataTable_DataTable_1.html",
+    "dist_versions/v1786059321331/Components_DataTable_DataTable_1.js",
+    "dist_versions/v1786059321331/Components_DataTable_DataTable_html_html_1.html",
+    "dist_versions/v1786059321331/Components_DataTable_DataTable_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Modal_Modal_1.html",
+    "dist_versions/v1786059321331/Components_Modal_Modal_1.js",
+    "dist_versions/v1786059321331/Components_Modal_Modal_html_html_1.html",
+    "dist_versions/v1786059321331/Components_Modal_Modal_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Pagination_Pagination_1.html",
+    "dist_versions/v1786059321331/Components_Pagination_Pagination_1.js",
+    "dist_versions/v1786059321331/Components_Pagination_Pagination_html_html_1.html",
+    "dist_versions/v1786059321331/Components_Pagination_Pagination_js_js_1.js",
+    "dist_versions/v1786059321331/Components_SearchBox_SearchBox_1.html",
+    "dist_versions/v1786059321331/Components_SearchBox_SearchBox_1.js",
+    "dist_versions/v1786059321331/Components_SearchBox_SearchBox_html_html_1.html",
+    "dist_versions/v1786059321331/Components_SearchBox_SearchBox_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Spinner_Spinner_1.html",
+    "dist_versions/v1786059321331/Components_Spinner_Spinner_1.js",
+    "dist_versions/v1786059321331/Components_Spinner_Spinner_html_html_1.html",
+    "dist_versions/v1786059321331/Components_Spinner_Spinner_js_js_1.js",
+    "dist_versions/v1786059321331/Components_Toolbar_Toolbar_1.html",
+    "dist_versions/v1786059321331/Components_Toolbar_Toolbar_1.js",
+    "dist_versions/v1786059321331/Components_Toolbar_Toolbar_html_html_1.html",
+    "dist_versions/v1786059321331/Components_Toolbar_Toolbar_js_js_1.js",
+    "dist_versions/v1786059321331/Config_js_js.js",
+    "dist_versions/v1786059321331/Config.js",
+    "dist_versions/v1786059321331/DashboardService_js_js.js",
+    "dist_versions/v1786059321331/DashboardService.js",
+    "dist_versions/v1786059321331/Database_js_js.js",
+    "dist_versions/v1786059321331/Database.js",
+    "dist_versions/v1786059321331/Main_html_html.html",
+    "dist_versions/v1786059321331/Main.html",
+    "dist_versions/v1786059321331/ModuleLoader_js_js.js",
+    "dist_versions/v1786059321331/ModuleLoader.js",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMaster_1.html",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMaster_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterSchema_1.js",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterScript_1.html",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterService_1.js",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterValidation_1.js",
+    "dist_versions/v1786059321331/Modules_BankMaster_BankMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMaster_1.html",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterSchema_1.js",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterScript_1.html",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterService_1.js",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterValidation_1.js",
+    "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMaster_1.html",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterSchema_1.js",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterScript_1.html",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterService_1.js",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterValidation_1.js",
+    "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMaster_1.html",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterSchema_1.js",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterScript_1.html",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterService_1.js",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterValidation_1.js",
+    "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_Settings_1.html",
+    "dist_versions/v1786059321331/Modules_Settings_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_SettingsScript_1.html",
+    "dist_versions/v1786059321331/Modules_SettingsScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_Society_1.html",
+    "dist_versions/v1786059321331/Modules_Society_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMaster_1.html",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterSchema_1.js",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterScript_1.html",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterService_1.js",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterValidation_1.js",
+    "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_SocietyScript_1.html",
+    "dist_versions/v1786059321331/Modules_SocietyScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMaster_1.html",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterSchema_1.js",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterScript_1.html",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterService_1.js",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterValidation_1.js",
+    "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMaster_1.html",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMaster_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterSchema_1.js",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterSchema_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterScript_1.html",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterScript_html_html_1.html",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterService_1.js",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterService_js_js_1.js",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterValidation_1.js",
+    "dist_versions/v1786059321331/Modules_UnitMaster_UnitMasterValidation_js_js_1.js",
+    "dist_versions/v1786059321331/Navbar_html_html.html",
+    "dist_versions/v1786059321331/Navbar.html",
+    "dist_versions/v1786059321331/Response_js_js.js",
+    "dist_versions/v1786059321331/Response.js",
+    "dist_versions/v1786059321331/SchemaService_js_js.js",
+    "dist_versions/v1786059321331/SchemaService.js",
+    "dist_versions/v1786059321331/SettingsService_js_js.js",
+    "dist_versions/v1786059321331/SettingsService.js",
+    "dist_versions/v1786059321331/Sidebar_html_html.html",
+    "dist_versions/v1786059321331/Sidebar.html",
+    "dist_versions/v1786059321331/SocietyService_js_js.js",
+    "dist_versions/v1786059321331/SocietyService.js",
+    "dist_versions/v1786059321331/Style_html_html.html",
+    "dist_versions/v1786059321331/Style.html",
+    "dist_versions/v1786059321331/Tools_Build_js_js.js",
+    "dist_versions/v1786059321331/Tools_Build.js",
+    "dist_versions/v1786059321331/Tools_Deploy_js_js.js",
+    "dist_versions/v1786059321331/Tools_Deploy.js",
+    "dist_versions/v1786059321331/Tools_DeploymentBuilder_js_js.js",
+    "dist_versions/v1786059321331/Tools_DeploymentBuilder.js",
+    "dist_versions/v1786059321331/Tools_DeploymentLogger_js_js.js",
+    "dist_versions/v1786059321331/Tools_DeploymentLogger.js",
+    "dist_versions/v1786059321331/Tools_DeploymentReporter_js_js.js",
+    "dist_versions/v1786059321331/Tools_DeploymentReporter.js",
+    "dist_versions/v1786059321331/Tools_DeploymentUtilities_js_js.js",
+    "dist_versions/v1786059321331/Tools_DeploymentUtilities.js",
+    "dist_versions/v1786059321331/Tools_DeploymentValidator_js_js.js",
+    "dist_versions/v1786059321331/Tools_DeploymentValidator.js",
+    "dist_versions/v1786059321331/Tools_DeploymentVersionManager_js_js.js",
+    "dist_versions/v1786059321331/Tools_DeploymentVersionManager.js",
+    "dist_versions/v1786059321331/Tools_IncludeResolver_js_js.js",
+    "dist_versions/v1786059321331/Tools_IncludeResolver.js",
+    "dist_versions/v1786059321331/Tools_ManifestGenerator_js_js.js",
+    "dist_versions/v1786059321331/Tools_ManifestGenerator.js",
+    "dist_versions/v1786059321331/Tools_RollbackManager_js_js.js",
+    "dist_versions/v1786059321331/Tools_RollbackManager.js",
+    "dist_versions/v1786059321331/Utils_js_js.js",
+    "dist_versions/v1786059321331/Utils.js",
+    "Main.html",
+    "Modules/MaterialMaster/MaterialMaster.html",
+    "Modules/MaterialMaster/MaterialMasterSchema.js",
+    "Modules/MaterialMaster/MaterialMasterScript.html",
+    "Modules/MaterialMaster/MaterialMasterService.js",
+    "Modules/MaterialMaster/MaterialMasterValidation.js",
+    "Components/Modal/Modal.html",
+    "Components/Modal/Modal.js",
+    "ModuleLoader.js",
+    "Modules/BankMaster/BankMaster.html",
+    "Modules/BankMaster/BankMasterSchema.js",
+    "Modules/BankMaster/BankMasterScript.html",
+    "Modules/BankMaster/BankMasterService.js",
+    "Modules/BankMaster/BankMasterValidation.js",
+    "Modules/ContractorMaster/ContractorMaster.html",
+    "Modules/ContractorMaster/ContractorMasterSchema.js",
+    "Modules/ContractorMaster/ContractorMasterScript.html",
+    "Modules/ContractorMaster/ContractorMasterService.js",
+    "Modules/ContractorMaster/ContractorMasterValidation.js",
+    "Modules/DepartmentMaster/DepartmentMaster.html",
+    "Modules/DepartmentMaster/DepartmentMasterSchema.js",
+    "Modules/DepartmentMaster/DepartmentMasterScript.html",
+    "Modules/DepartmentMaster/DepartmentMasterService.js",
+    "Modules/DepartmentMaster/DepartmentMasterValidation.js",
+    "Modules/MaterialMaster/MaterialMaster.html",
+    "Modules/MaterialMaster/MaterialMasterSchema.js",
+    "Modules/MaterialMaster/MaterialMasterScript.html",
+    "Modules/MaterialMaster/MaterialMasterService.js",
+    "Modules/MaterialMaster/MaterialMasterValidation.js",
+    "Modules/Settings.html",
+    "Modules/SettingsScript.html",
+    "Modules/Society.html",
+    "Modules/SocietyMaster/SocietyMaster.html",
+    "Modules/SocietyMaster/SocietyMasterSchema.js",
+    "Modules/SocietyMaster/SocietyMasterScript.html",
+    "Modules/SocietyMaster/SocietyMasterService.js",
+    "Modules/SocietyMaster/SocietyMasterValidation.js",
+    "Modules/SocietyScript.html",
+    "Modules/SupplierMaster/SupplierMaster.html",
+    "Modules/SupplierMaster/SupplierMasterSchema.js",
+    "Modules/SupplierMaster/SupplierMasterScript.html",
+    "Modules/SupplierMaster/SupplierMasterService.js",
+    "Modules/SupplierMaster/SupplierMasterValidation.js",
+    "Modules/UnitMaster/UnitMaster.html",
+    "Modules/UnitMaster/UnitMasterSchema.js",
+    "Modules/UnitMaster/UnitMasterScript.html",
+    "Modules/UnitMaster/UnitMasterService.js",
+    "Modules/UnitMaster/UnitMasterValidation.js",
+    "Navbar.html",
+    "Components/Pagination/Pagination.html",
+    "Components/Pagination/Pagination.js",
+    "Response.js",
+    "SchemaService.js",
+    "Components/SearchBox/SearchBox.html",
+    "Components/SearchBox/SearchBox.js",
+    "Modules/Settings.html",
+    "Modules/SettingsScript.html",
+    "SettingsService.js",
+    "Sidebar.html",
+    "Modules/Society.html",
+    "Modules/SocietyMaster/SocietyMaster.html",
+    "Modules/SocietyMaster/SocietyMasterSchema.js",
+    "Modules/SocietyMaster/SocietyMasterScript.html",
+    "Modules/SocietyMaster/SocietyMasterService.js",
+    "Modules/SocietyMaster/SocietyMasterValidation.js",
+    "Modules/SocietyScript.html",
+    "SocietyService.js",
+    "Components/Spinner/Spinner.html",
+    "Components/Spinner/Spinner.js",
+    "Style.html",
+    "Modules/SupplierMaster/SupplierMaster.html",
+    "Modules/SupplierMaster/SupplierMasterSchema.js",
+    "Modules/SupplierMaster/SupplierMasterScript.html",
+    "Modules/SupplierMaster/SupplierMasterService.js",
+    "Modules/SupplierMaster/SupplierMasterValidation.js",
+    "Components/Toolbar/Toolbar.html",
+    "Components/Toolbar/Toolbar.js",
+    "Tools/Build.js",
+    "Tools/Deploy.js",
+    "Tools/DeploymentBuilder.js",
+    "Tools/DeploymentLogger.js",
+    "Tools/DeploymentReporter.js",
+    "Tools/DeploymentUtilities.js",
+    "Tools/DeploymentValidator.js",
+    "Tools/DeploymentVersionManager.js",
+    "Tools/IncludeResolver.js",
+    "Tools/ManifestGenerator.js",
+    "Tools/RollbackManager.js",
+    "Modules/UnitMaster/UnitMaster.html",
+    "Modules/UnitMaster/UnitMasterSchema.js",
+    "Modules/UnitMaster/UnitMasterScript.html",
+    "Modules/UnitMaster/UnitMasterService.js",
+    "Modules/UnitMaster/UnitMasterValidation.js",
+    "Utils.js"
+  ],
+  "edges": [
+    {
+      "from": "Modules/BankMaster/BankMaster.html",
+      "to": "Modules/BankMaster/BankMasterScript"
+    },
+    {
+      "from": "build/build_build_Code_js_js.js",
+      "to": "Main"
+    },
+    {
+      "from": "build/build_build_Main_html_html.html",
+      "to": "build_build_Style_html_html"
+    },
+    {
+      "from": "build/build_build_Main_html_html.html",
+      "to": "build_build_Navbar_html_html"
+    },
+    {
+      "from": "build/build_build_Main_html_html.html",
+      "to": "build_build_Sidebar_html_html"
+    },
+    {
+      "from": "build/build_build_Modules_BankMaster_BankMaster_html_html_1.html",
+      "to": "build_build_Modules_BankMaster_BankMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+      "to": "build_build_Modules_ContractorMaster_ContractorMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+      "to": "build_build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+      "to": "build_build_Modules_MaterialMaster_MaterialMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_Settings_html_html_1.html",
+      "to": "build_build_Modules_SettingsScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_Society_html_html_1.html",
+      "to": "build_build_Modules_SocietyScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+      "to": "build_build_Modules_SocietyMaster_SocietyMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+      "to": "build_build_Modules_SupplierMaster_SupplierMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+      "to": "build_build_Modules_UnitMaster_UnitMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Code_js_js.js",
+      "to": "Main"
+    },
+    {
+      "from": "build/build_Code.js",
+      "to": "Main"
+    },
+    {
+      "from": "build/build_Main_html_html.html",
+      "to": "build_Style_html_html"
+    },
+    {
+      "from": "build/build_Main_html_html.html",
+      "to": "build_Navbar_html_html"
+    },
+    {
+      "from": "build/build_Main_html_html.html",
+      "to": "build_Sidebar_html_html"
+    },
+    {
+      "from": "build/build_Main.html",
+      "to": "Style"
+    },
+    {
+      "from": "build/build_Main.html",
+      "to": "Navbar"
+    },
+    {
+      "from": "build/build_Main.html",
+      "to": "Sidebar"
+    },
+    {
+      "from": "build/build_Modules_BankMaster_BankMaster_1.html",
+      "to": "build_Modules_BankMaster_BankMasterScript_1"
+    },
+    {
+      "from": "build/build_Modules_BankMaster_BankMaster_html_html_1.html",
+      "to": "build_Modules_BankMaster_BankMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_ContractorMaster_ContractorMaster_1.html",
+      "to": "build_Modules_ContractorMaster_ContractorMasterScript_1"
+    },
+    {
+      "from": "build/build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+      "to": "build_Modules_ContractorMaster_ContractorMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_DepartmentMaster_DepartmentMaster_1.html",
+      "to": "build_Modules_DepartmentMaster_DepartmentMasterScript_1"
+    },
+    {
+      "from": "build/build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+      "to": "build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_MaterialMaster_MaterialMaster_1.html",
+      "to": "build_Modules_MaterialMaster_MaterialMasterScript_1"
+    },
+    {
+      "from": "build/build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+      "to": "build_Modules_MaterialMaster_MaterialMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_Settings_1.html",
+      "to": "build_Modules_SettingsScript_1"
+    },
+    {
+      "from": "build/build_Modules_Settings_html_html_1.html",
+      "to": "build_Modules_SettingsScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_Society_1.html",
+      "to": "build_Modules_SocietyScript_1"
+    },
+    {
+      "from": "build/build_Modules_Society_html_html_1.html",
+      "to": "build_Modules_SocietyScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_SocietyMaster_SocietyMaster_1.html",
+      "to": "build_Modules_SocietyMaster_SocietyMasterScript_1"
+    },
+    {
+      "from": "build/build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+      "to": "build_Modules_SocietyMaster_SocietyMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_SupplierMaster_SupplierMaster_1.html",
+      "to": "build_Modules_SupplierMaster_SupplierMasterScript_1"
+    },
+    {
+      "from": "build/build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+      "to": "build_Modules_SupplierMaster_SupplierMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Modules_UnitMaster_UnitMaster_1.html",
+      "to": "build_Modules_UnitMaster_UnitMasterScript_1"
+    },
+    {
+      "from": "build/build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+      "to": "build_Modules_UnitMaster_UnitMasterScript_html_html_1"
+    },
+    {
+      "from": "build/build_Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "build/build_Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "build/build_Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "build/build_Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "build/Code_js_js.js",
+      "to": "Main"
+    },
+    {
+      "from": "build/Code.js",
+      "to": "Main"
+    },
+    {
+      "from": "build/Main_html_html.html",
+      "to": "Style_html_html"
+    },
+    {
+      "from": "build/Main_html_html.html",
+      "to": "Navbar_html_html"
+    },
+    {
+      "from": "build/Main_html_html.html",
+      "to": "Sidebar_html_html"
+    },
+    {
+      "from": "build/Main.html",
+      "to": "Style"
+    },
+    {
+      "from": "build/Main.html",
+      "to": "Navbar"
+    },
+    {
+      "from": "build/Main.html",
+      "to": "Sidebar"
+    },
+    {
+      "from": "build/Modules_BankMaster_BankMaster_1.html",
+      "to": "Modules_BankMaster_BankMasterScript_1"
+    },
+    {
+      "from": "build/Modules_BankMaster_BankMaster_html_html_1.html",
+      "to": "Modules_BankMaster_BankMasterScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_ContractorMaster_ContractorMaster_1.html",
+      "to": "Modules_ContractorMaster_ContractorMasterScript_1"
+    },
+    {
+      "from": "build/Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+      "to": "Modules_ContractorMaster_ContractorMasterScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_DepartmentMaster_DepartmentMaster_1.html",
+      "to": "Modules_DepartmentMaster_DepartmentMasterScript_1"
+    },
+    {
+      "from": "build/Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+      "to": "Modules_DepartmentMaster_DepartmentMasterScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_MaterialMaster_MaterialMaster_1.html",
+      "to": "Modules_MaterialMaster_MaterialMasterScript_1"
+    },
+    {
+      "from": "build/Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+      "to": "Modules_MaterialMaster_MaterialMasterScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_Settings_1.html",
+      "to": "Modules_SettingsScript_1"
+    },
+    {
+      "from": "build/Modules_Settings_html_html_1.html",
+      "to": "Modules_SettingsScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_Society_1.html",
+      "to": "Modules_SocietyScript_1"
+    },
+    {
+      "from": "build/Modules_Society_html_html_1.html",
+      "to": "Modules_SocietyScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_SocietyMaster_SocietyMaster_1.html",
+      "to": "Modules_SocietyMaster_SocietyMasterScript_1"
+    },
+    {
+      "from": "build/Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+      "to": "Modules_SocietyMaster_SocietyMasterScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_SupplierMaster_SupplierMaster_1.html",
+      "to": "Modules_SupplierMaster_SupplierMasterScript_1"
+    },
+    {
+      "from": "build/Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+      "to": "Modules_SupplierMaster_SupplierMasterScript_html_html_1"
+    },
+    {
+      "from": "build/Modules_UnitMaster_UnitMaster_1.html",
+      "to": "Modules_UnitMaster_UnitMasterScript_1"
+    },
+    {
+      "from": "build/Modules_UnitMaster_UnitMaster_html_html_1.html",
+      "to": "Modules_UnitMaster_UnitMasterScript_html_html_1"
+    },
+    {
+      "from": "build/Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "build/Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "build/Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "build/Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "Code.js",
+      "to": "Main"
+    },
+    {
+      "from": "Modules/ContractorMaster/ContractorMaster.html",
+      "to": "Modules/ContractorMaster/ContractorMasterScript"
+    },
+    {
+      "from": "Modules/DepartmentMaster/DepartmentMaster.html",
+      "to": "Modules/DepartmentMaster/DepartmentMasterScript"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Code_js_js.js",
+      "to": "Main"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Main_html_html.html",
+      "to": "build_build_Style_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Main_html_html.html",
+      "to": "build_build_Navbar_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Main_html_html.html",
+      "to": "build_build_Sidebar_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_BankMaster_BankMaster_html_html_1.html",
+      "to": "build_build_Modules_BankMaster_BankMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+      "to": "build_build_Modules_ContractorMaster_ContractorMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+      "to": "build_build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+      "to": "build_build_Modules_MaterialMaster_MaterialMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_Settings_html_html_1.html",
+      "to": "build_build_Modules_SettingsScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_Society_html_html_1.html",
+      "to": "build_build_Modules_SocietyScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+      "to": "build_build_Modules_SocietyMaster_SocietyMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+      "to": "build_build_Modules_SupplierMaster_SupplierMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+      "to": "build_build_Modules_UnitMaster_UnitMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Code_js_js.js",
+      "to": "Main"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Code.js",
+      "to": "Main"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Main_html_html.html",
+      "to": "build_Style_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Main_html_html.html",
+      "to": "build_Navbar_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Main_html_html.html",
+      "to": "build_Sidebar_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Main.html",
+      "to": "Style"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Main.html",
+      "to": "Navbar"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Main.html",
+      "to": "Sidebar"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_BankMaster_BankMaster_1.html",
+      "to": "build_Modules_BankMaster_BankMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_BankMaster_BankMaster_html_html_1.html",
+      "to": "build_Modules_BankMaster_BankMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMaster_1.html",
+      "to": "build_Modules_ContractorMaster_ContractorMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+      "to": "build_Modules_ContractorMaster_ContractorMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMaster_1.html",
+      "to": "build_Modules_DepartmentMaster_DepartmentMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+      "to": "build_Modules_DepartmentMaster_DepartmentMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMaster_1.html",
+      "to": "build_Modules_MaterialMaster_MaterialMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+      "to": "build_Modules_MaterialMaster_MaterialMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_Settings_1.html",
+      "to": "build_Modules_SettingsScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_Settings_html_html_1.html",
+      "to": "build_Modules_SettingsScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_Society_1.html",
+      "to": "build_Modules_SocietyScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_Society_html_html_1.html",
+      "to": "build_Modules_SocietyScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMaster_1.html",
+      "to": "build_Modules_SocietyMaster_SocietyMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+      "to": "build_Modules_SocietyMaster_SocietyMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMaster_1.html",
+      "to": "build_Modules_SupplierMaster_SupplierMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+      "to": "build_Modules_SupplierMaster_SupplierMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMaster_1.html",
+      "to": "build_Modules_UnitMaster_UnitMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Modules_UnitMaster_UnitMaster_html_html_1.html",
+      "to": "build_Modules_UnitMaster_UnitMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "dist_versions/v1786059321331/build_Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Code_js_js.js",
+      "to": "Main"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Code.js",
+      "to": "Main"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Main_html_html.html",
+      "to": "Style_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Main_html_html.html",
+      "to": "Navbar_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Main_html_html.html",
+      "to": "Sidebar_html_html"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Main.html",
+      "to": "Style"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Main.html",
+      "to": "Navbar"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Main.html",
+      "to": "Sidebar"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_BankMaster_BankMaster_1.html",
+      "to": "Modules_BankMaster_BankMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_BankMaster_BankMaster_html_html_1.html",
+      "to": "Modules_BankMaster_BankMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMaster_1.html",
+      "to": "Modules_ContractorMaster_ContractorMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_ContractorMaster_ContractorMaster_html_html_1.html",
+      "to": "Modules_ContractorMaster_ContractorMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMaster_1.html",
+      "to": "Modules_DepartmentMaster_DepartmentMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_DepartmentMaster_DepartmentMaster_html_html_1.html",
+      "to": "Modules_DepartmentMaster_DepartmentMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMaster_1.html",
+      "to": "Modules_MaterialMaster_MaterialMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_MaterialMaster_MaterialMaster_html_html_1.html",
+      "to": "Modules_MaterialMaster_MaterialMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_Settings_1.html",
+      "to": "Modules_SettingsScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_Settings_html_html_1.html",
+      "to": "Modules_SettingsScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_Society_1.html",
+      "to": "Modules_SocietyScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_Society_html_html_1.html",
+      "to": "Modules_SocietyScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMaster_1.html",
+      "to": "Modules_SocietyMaster_SocietyMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_SocietyMaster_SocietyMaster_html_html_1.html",
+      "to": "Modules_SocietyMaster_SocietyMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMaster_1.html",
+      "to": "Modules_SupplierMaster_SupplierMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_SupplierMaster_SupplierMaster_html_html_1.html",
+      "to": "Modules_SupplierMaster_SupplierMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_UnitMaster_UnitMaster_1.html",
+      "to": "Modules_UnitMaster_UnitMasterScript_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Modules_UnitMaster_UnitMaster_html_html_1.html",
+      "to": "Modules_UnitMaster_UnitMasterScript_html_html_1"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "dist_versions/v1786059321331/Tools_DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "dist_versions/v1786059321331/Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "dist_versions/v1786059321331/Tools_IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "Main.html",
+      "to": "Style"
+    },
+    {
+      "from": "Main.html",
+      "to": "Navbar"
+    },
+    {
+      "from": "Main.html",
+      "to": "Sidebar"
+    },
+    {
+      "from": "Modules/MaterialMaster/MaterialMaster.html",
+      "to": "Modules/MaterialMaster/MaterialMasterScript"
+    },
+    {
+      "from": "Modules/BankMaster/BankMaster.html",
+      "to": "Modules/BankMaster/BankMasterScript"
+    },
+    {
+      "from": "Modules/ContractorMaster/ContractorMaster.html",
+      "to": "Modules/ContractorMaster/ContractorMasterScript"
+    },
+    {
+      "from": "Modules/DepartmentMaster/DepartmentMaster.html",
+      "to": "Modules/DepartmentMaster/DepartmentMasterScript"
+    },
+    {
+      "from": "Modules/MaterialMaster/MaterialMaster.html",
+      "to": "Modules/MaterialMaster/MaterialMasterScript"
+    },
+    {
+      "from": "Modules/Settings.html",
+      "to": "Modules/SettingsScript"
+    },
+    {
+      "from": "Modules/Society.html",
+      "to": "Modules/SocietyScript"
+    },
+    {
+      "from": "Modules/SocietyMaster/SocietyMaster.html",
+      "to": "Modules/SocietyMaster/SocietyMasterScript"
+    },
+    {
+      "from": "Modules/SupplierMaster/SupplierMaster.html",
+      "to": "Modules/SupplierMaster/SupplierMasterScript"
+    },
+    {
+      "from": "Modules/UnitMaster/UnitMaster.html",
+      "to": "Modules/UnitMaster/UnitMasterScript"
+    },
+    {
+      "from": "Modules/Settings.html",
+      "to": "Modules/SettingsScript"
+    },
+    {
+      "from": "Modules/Society.html",
+      "to": "Modules/SocietyScript"
+    },
+    {
+      "from": "Modules/SocietyMaster/SocietyMaster.html",
+      "to": "Modules/SocietyMaster/SocietyMasterScript"
+    },
+    {
+      "from": "Modules/SupplierMaster/SupplierMaster.html",
+      "to": "Modules/SupplierMaster/SupplierMasterScript"
+    },
+    {
+      "from": "Tools/DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "Tools/DeploymentBuilder.js",
+      "to": "..."
+    },
+    {
+      "from": "Tools/IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "Tools/IncludeResolver.js",
+      "to": "Name"
+    },
+    {
+      "from": "Modules/UnitMaster/UnitMaster.html",
+      "to": "Modules/UnitMaster/UnitMasterScript"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "sourceRoots": [
+    ".",
+    "Components",
+    "Modules"
+  ],
+  "ignoreDirs": [
+    ".git",
+    ".github",
+    "node_modules",
+    "AI",
+    "build",
+    "dist",
+    "dist_versions",
+    "coverage"
+  ],
+  "extensions": [".html", ".js", ".gs"],
+  "buildDir": "build",
+  "logFile": "build/deployment_log.txt",
+  "reportFile": "AI/DEPLOYMENT/DEPLOYMENT_REPORT.md"
+}

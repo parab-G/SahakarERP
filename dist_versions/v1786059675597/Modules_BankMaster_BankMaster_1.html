@@ -1,0 +1,19 @@
+<!-- BankMaster.html
+     Bank Master UI — uses reusable components and Bootstrap 5
+-->
+
+<div id="bank-master-root" class="container-fluid p-3">
+  <div id="bankToolbarContainer"></div>
+  <div id="bankSummaryRow" class="row g-3 my-3"></div>
+  <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+    <div id="bankSearchContainer" class="flex-grow-1"></div>
+    <div id="bankFiltersContainer" class="d-flex gap-2"></div>
+  </div>
+  <div id="bankTableContainer" class="mb-3"></div>
+  <div id="bankPaginationContainer" class="d-flex justify-content-end"></div>
+  <div id="bankModalHost"></div>
+  <div id="bankAlertHost"></div>
+  <div id="bankSpinnerHost"></div>
+</div>
+
+<?!= include('Modules_BankMaster_BankMasterScript_1') ?>

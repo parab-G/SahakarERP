@@ -1,0 +1,712 @@
+{
+  "mapping": {
+    "Components/Alert/Alert.html": "Components_Alert_Alert_1",
+    "Components/Alert/Alert.js": "Components_Alert_Alert_1",
+    "App.html": "App",
+    "Modules/BankMaster/BankMaster.html": "Modules_BankMaster_BankMaster_1",
+    "Modules/BankMaster/BankMasterSchema.js": "Modules_BankMaster_BankMasterSchema_1",
+    "Modules/BankMaster/BankMasterScript.html": "Modules_BankMaster_BankMasterScript_1",
+    "Modules/BankMaster/BankMasterService.js": "Modules_BankMaster_BankMasterService_1",
+    "Modules/BankMaster/BankMasterValidation.js": "Modules_BankMaster_BankMasterValidation_1",
+    "Components/Card/Card.html": "Components_Card_Card_1",
+    "Components/Card/Card.js": "Components_Card_Card_1",
+    "Code.js": "Code",
+    "Components/Core/Accessibility.js": "Components_Core_Accessibility_1",
+    "Components/Core/BaseComponent.js": "Components_Core_BaseComponent_1",
+    "Components/Core/ComponentFactory.js": "Components_Core_ComponentFactory_1",
+    "Components/Core/ComponentRegistry.js": "Components_Core_ComponentRegistry_1",
+    "Components/Core/ConfigManager.js": "Components_Core_ConfigManager_1",
+    "Components/Core/EventEmitter.js": "Components_Core_EventEmitter_1",
+    "Components/Core/Integrations.js": "Components_Core_Integrations_1",
+    "Components/Core/SharedHelpers.js": "Components_Core_SharedHelpers_1",
+    "Components/Core/ThemeManager.js": "Components_Core_ThemeManager_1",
+    "Components/DataTable/DataTable.html": "Components_DataTable_DataTable_1",
+    "Components/DataTable/DataTable.js": "Components_DataTable_DataTable_1",
+    "Components/Modal/Modal.html": "Components_Modal_Modal_1",
+    "Components/Modal/Modal.js": "Components_Modal_Modal_1",
+    "Components/Pagination/Pagination.html": "Components_Pagination_Pagination_1",
+    "Components/Pagination/Pagination.js": "Components_Pagination_Pagination_1",
+    "Components/SearchBox/SearchBox.html": "Components_SearchBox_SearchBox_1",
+    "Components/SearchBox/SearchBox.js": "Components_SearchBox_SearchBox_1",
+    "Components/Spinner/Spinner.html": "Components_Spinner_Spinner_1",
+    "Components/Spinner/Spinner.js": "Components_Spinner_Spinner_1",
+    "Components/Toolbar/Toolbar.html": "Components_Toolbar_Toolbar_1",
+    "Components/Toolbar/Toolbar.js": "Components_Toolbar_Toolbar_1",
+    "Config.js": "Config",
+    "Modules/ContractorMaster/ContractorMaster.html": "Modules_ContractorMaster_ContractorMaster_1",
+    "Modules/ContractorMaster/ContractorMasterSchema.js": "Modules_ContractorMaster_ContractorMasterSchema_1",
+    "Modules/ContractorMaster/ContractorMasterScript.html": "Modules_ContractorMaster_ContractorMasterScript_1",
+    "Modules/ContractorMaster/ContractorMasterService.js": "Modules_ContractorMaster_ContractorMasterService_1",
+    "Modules/ContractorMaster/ContractorMasterValidation.js": "Modules_ContractorMaster_ContractorMasterValidation_1",
+    "DashboardService.js": "DashboardService",
+    "Database.js": "Database",
+    "Modules/DepartmentMaster/DepartmentMaster.html": "Modules_DepartmentMaster_DepartmentMaster_1",
+    "Modules/DepartmentMaster/DepartmentMasterSchema.js": "Modules_DepartmentMaster_DepartmentMasterSchema_1",
+    "Modules/DepartmentMaster/DepartmentMasterScript.html": "Modules_DepartmentMaster_DepartmentMasterScript_1",
+    "Modules/DepartmentMaster/DepartmentMasterService.js": "Modules_DepartmentMaster_DepartmentMasterService_1",
+    "Modules/DepartmentMaster/DepartmentMasterValidation.js": "Modules_DepartmentMaster_DepartmentMasterValidation_1",
+    "Main.html": "Main",
+    "Modules/MaterialMaster/MaterialMaster.html": "Modules_MaterialMaster_MaterialMaster_1",
+    "Modules/MaterialMaster/MaterialMasterSchema.js": "Modules_MaterialMaster_MaterialMasterSchema_1",
+    "Modules/MaterialMaster/MaterialMasterScript.html": "Modules_MaterialMaster_MaterialMasterScript_1",
+    "Modules/MaterialMaster/MaterialMasterService.js": "Modules_MaterialMaster_MaterialMasterService_1",
+    "Modules/MaterialMaster/MaterialMasterValidation.js": "Modules_MaterialMaster_MaterialMasterValidation_1",
+    "ModuleLoader.js": "ModuleLoader",
+    "Modules/Settings.html": "Modules_Settings_1",
+    "Modules/SettingsScript.html": "Modules_SettingsScript_1",
+    "Modules/Society.html": "Modules_Society_1",
+    "Modules/SocietyMaster/SocietyMaster.html": "Modules_SocietyMaster_SocietyMaster_1",
+    "Modules/SocietyMaster/SocietyMasterSchema.js": "Modules_SocietyMaster_SocietyMasterSchema_1",
+    "Modules/SocietyMaster/SocietyMasterScript.html": "Modules_SocietyMaster_SocietyMasterScript_1",
+    "Modules/SocietyMaster/SocietyMasterService.js": "Modules_SocietyMaster_SocietyMasterService_1",
+    "Modules/SocietyMaster/SocietyMasterValidation.js": "Modules_SocietyMaster_SocietyMasterValidation_1",
+    "Modules/SocietyScript.html": "Modules_SocietyScript_1",
+    "Modules/SupplierMaster/SupplierMaster.html": "Modules_SupplierMaster_SupplierMaster_1",
+    "Modules/SupplierMaster/SupplierMasterSchema.js": "Modules_SupplierMaster_SupplierMasterSchema_1",
+    "Modules/SupplierMaster/SupplierMasterScript.html": "Modules_SupplierMaster_SupplierMasterScript_1",
+    "Modules/SupplierMaster/SupplierMasterService.js": "Modules_SupplierMaster_SupplierMasterService_1",
+    "Modules/SupplierMaster/SupplierMasterValidation.js": "Modules_SupplierMaster_SupplierMasterValidation_1",
+    "Modules/UnitMaster/UnitMaster.html": "Modules_UnitMaster_UnitMaster_1",
+    "Modules/UnitMaster/UnitMasterSchema.js": "Modules_UnitMaster_UnitMasterSchema_1",
+    "Modules/UnitMaster/UnitMasterScript.html": "Modules_UnitMaster_UnitMasterScript_1",
+    "Modules/UnitMaster/UnitMasterService.js": "Modules_UnitMaster_UnitMasterService_1",
+    "Modules/UnitMaster/UnitMasterValidation.js": "Modules_UnitMaster_UnitMasterValidation_1",
+    "Navbar.html": "Navbar",
+    "Response.js": "Response",
+    "SchemaService.js": "SchemaService",
+    "SettingsService.js": "SettingsService",
+    "Sidebar.html": "Sidebar",
+    "SocietyService.js": "SocietyService",
+    "Style.html": "Style",
+    "Tools/Build.js": "Tools_Build",
+    "Tools/Deploy.js": "Tools_Deploy",
+    "Tools/DeploymentBuilder.js": "Tools_DeploymentBuilder",
+    "Tools/DeploymentLogger.js": "Tools_DeploymentLogger",
+    "Tools/DeploymentReporter.js": "Tools_DeploymentReporter",
+    "Tools/DeploymentUtilities.js": "Tools_DeploymentUtilities",
+    "Tools/DeploymentValidator.js": "Tools_DeploymentValidator",
+    "Tools/DeploymentVersionManager.js": "Tools_DeploymentVersionManager",
+    "Tools/IncludeResolver.js": "Tools_IncludeResolver",
+    "Tools/ManifestGenerator.js": "Tools_ManifestGenerator",
+    "Tools/RollbackManager.js": "Tools_RollbackManager",
+    "Utils.js": "Utils"
+  },
+  "entries": [
+    {
+      "source": "Components/Alert/Alert.html",
+      "target": "Components_Alert_Alert.html"
+    },
+    {
+      "source": "Components/Alert/Alert.js",
+      "target": "Components_Alert_Alert.js"
+    },
+    {
+      "source": "App.html",
+      "target": "App.html"
+    },
+    {
+      "source": "Modules/BankMaster/BankMaster.html",
+      "target": "Modules_BankMaster_BankMaster.html"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterSchema.js",
+      "target": "Modules_BankMaster_BankMasterSchema.js"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterScript.html",
+      "target": "Modules_BankMaster_BankMasterScript.html"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterService.js",
+      "target": "Modules_BankMaster_BankMasterService.js"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterValidation.js",
+      "target": "Modules_BankMaster_BankMasterValidation.js"
+    },
+    {
+      "source": "Components/Card/Card.html",
+      "target": "Components_Card_Card.html"
+    },
+    {
+      "source": "Components/Card/Card.js",
+      "target": "Components_Card_Card.js"
+    },
+    {
+      "source": "Code.js",
+      "target": "Code.js"
+    },
+    {
+      "source": "Components/Alert/Alert.html",
+      "target": "Components_Alert_Alert_1.html"
+    },
+    {
+      "source": "Components/Alert/Alert.js",
+      "target": "Components_Alert_Alert_1.js"
+    },
+    {
+      "source": "Components/Card/Card.html",
+      "target": "Components_Card_Card_1.html"
+    },
+    {
+      "source": "Components/Card/Card.js",
+      "target": "Components_Card_Card_1.js"
+    },
+    {
+      "source": "Components/Core/Accessibility.js",
+      "target": "Components_Core_Accessibility.js"
+    },
+    {
+      "source": "Components/Core/BaseComponent.js",
+      "target": "Components_Core_BaseComponent.js"
+    },
+    {
+      "source": "Components/Core/ComponentFactory.js",
+      "target": "Components_Core_ComponentFactory.js"
+    },
+    {
+      "source": "Components/Core/ComponentRegistry.js",
+      "target": "Components_Core_ComponentRegistry.js"
+    },
+    {
+      "source": "Components/Core/ConfigManager.js",
+      "target": "Components_Core_ConfigManager.js"
+    },
+    {
+      "source": "Components/Core/EventEmitter.js",
+      "target": "Components_Core_EventEmitter.js"
+    },
+    {
+      "source": "Components/Core/Integrations.js",
+      "target": "Components_Core_Integrations.js"
+    },
+    {
+      "source": "Components/Core/SharedHelpers.js",
+      "target": "Components_Core_SharedHelpers.js"
+    },
+    {
+      "source": "Components/Core/ThemeManager.js",
+      "target": "Components_Core_ThemeManager.js"
+    },
+    {
+      "source": "Components/DataTable/DataTable.html",
+      "target": "Components_DataTable_DataTable.html"
+    },
+    {
+      "source": "Components/DataTable/DataTable.js",
+      "target": "Components_DataTable_DataTable.js"
+    },
+    {
+      "source": "Components/Modal/Modal.html",
+      "target": "Components_Modal_Modal.html"
+    },
+    {
+      "source": "Components/Modal/Modal.js",
+      "target": "Components_Modal_Modal.js"
+    },
+    {
+      "source": "Components/Pagination/Pagination.html",
+      "target": "Components_Pagination_Pagination.html"
+    },
+    {
+      "source": "Components/Pagination/Pagination.js",
+      "target": "Components_Pagination_Pagination.js"
+    },
+    {
+      "source": "Components/SearchBox/SearchBox.html",
+      "target": "Components_SearchBox_SearchBox.html"
+    },
+    {
+      "source": "Components/SearchBox/SearchBox.js",
+      "target": "Components_SearchBox_SearchBox.js"
+    },
+    {
+      "source": "Components/Spinner/Spinner.html",
+      "target": "Components_Spinner_Spinner.html"
+    },
+    {
+      "source": "Components/Spinner/Spinner.js",
+      "target": "Components_Spinner_Spinner.js"
+    },
+    {
+      "source": "Components/Toolbar/Toolbar.html",
+      "target": "Components_Toolbar_Toolbar.html"
+    },
+    {
+      "source": "Components/Toolbar/Toolbar.js",
+      "target": "Components_Toolbar_Toolbar.js"
+    },
+    {
+      "source": "Config.js",
+      "target": "Config.js"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMaster.html",
+      "target": "Modules_ContractorMaster_ContractorMaster.html"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterSchema.js",
+      "target": "Modules_ContractorMaster_ContractorMasterSchema.js"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterScript.html",
+      "target": "Modules_ContractorMaster_ContractorMasterScript.html"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterService.js",
+      "target": "Modules_ContractorMaster_ContractorMasterService.js"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterValidation.js",
+      "target": "Modules_ContractorMaster_ContractorMasterValidation.js"
+    },
+    {
+      "source": "Components/Core/Accessibility.js",
+      "target": "Components_Core_Accessibility_1.js"
+    },
+    {
+      "source": "Components/Core/BaseComponent.js",
+      "target": "Components_Core_BaseComponent_1.js"
+    },
+    {
+      "source": "Components/Core/ComponentFactory.js",
+      "target": "Components_Core_ComponentFactory_1.js"
+    },
+    {
+      "source": "Components/Core/ComponentRegistry.js",
+      "target": "Components_Core_ComponentRegistry_1.js"
+    },
+    {
+      "source": "Components/Core/ConfigManager.js",
+      "target": "Components_Core_ConfigManager_1.js"
+    },
+    {
+      "source": "Components/Core/EventEmitter.js",
+      "target": "Components_Core_EventEmitter_1.js"
+    },
+    {
+      "source": "Components/Core/Integrations.js",
+      "target": "Components_Core_Integrations_1.js"
+    },
+    {
+      "source": "Components/Core/SharedHelpers.js",
+      "target": "Components_Core_SharedHelpers_1.js"
+    },
+    {
+      "source": "Components/Core/ThemeManager.js",
+      "target": "Components_Core_ThemeManager_1.js"
+    },
+    {
+      "source": "DashboardService.js",
+      "target": "DashboardService.js"
+    },
+    {
+      "source": "Database.js",
+      "target": "Database.js"
+    },
+    {
+      "source": "Components/DataTable/DataTable.html",
+      "target": "Components_DataTable_DataTable_1.html"
+    },
+    {
+      "source": "Components/DataTable/DataTable.js",
+      "target": "Components_DataTable_DataTable_1.js"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMaster.html",
+      "target": "Modules_DepartmentMaster_DepartmentMaster.html"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterSchema.js",
+      "target": "Modules_DepartmentMaster_DepartmentMasterSchema.js"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterScript.html",
+      "target": "Modules_DepartmentMaster_DepartmentMasterScript.html"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterService.js",
+      "target": "Modules_DepartmentMaster_DepartmentMasterService.js"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterValidation.js",
+      "target": "Modules_DepartmentMaster_DepartmentMasterValidation.js"
+    },
+    {
+      "source": "Main.html",
+      "target": "Main.html"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMaster.html",
+      "target": "Modules_MaterialMaster_MaterialMaster.html"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterSchema.js",
+      "target": "Modules_MaterialMaster_MaterialMasterSchema.js"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterScript.html",
+      "target": "Modules_MaterialMaster_MaterialMasterScript.html"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterService.js",
+      "target": "Modules_MaterialMaster_MaterialMasterService.js"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterValidation.js",
+      "target": "Modules_MaterialMaster_MaterialMasterValidation.js"
+    },
+    {
+      "source": "Components/Modal/Modal.html",
+      "target": "Components_Modal_Modal_1.html"
+    },
+    {
+      "source": "Components/Modal/Modal.js",
+      "target": "Components_Modal_Modal_1.js"
+    },
+    {
+      "source": "ModuleLoader.js",
+      "target": "ModuleLoader.js"
+    },
+    {
+      "source": "Modules/BankMaster/BankMaster.html",
+      "target": "Modules_BankMaster_BankMaster_1.html"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterSchema.js",
+      "target": "Modules_BankMaster_BankMasterSchema_1.js"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterScript.html",
+      "target": "Modules_BankMaster_BankMasterScript_1.html"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterService.js",
+      "target": "Modules_BankMaster_BankMasterService_1.js"
+    },
+    {
+      "source": "Modules/BankMaster/BankMasterValidation.js",
+      "target": "Modules_BankMaster_BankMasterValidation_1.js"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMaster.html",
+      "target": "Modules_ContractorMaster_ContractorMaster_1.html"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterSchema.js",
+      "target": "Modules_ContractorMaster_ContractorMasterSchema_1.js"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterScript.html",
+      "target": "Modules_ContractorMaster_ContractorMasterScript_1.html"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterService.js",
+      "target": "Modules_ContractorMaster_ContractorMasterService_1.js"
+    },
+    {
+      "source": "Modules/ContractorMaster/ContractorMasterValidation.js",
+      "target": "Modules_ContractorMaster_ContractorMasterValidation_1.js"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMaster.html",
+      "target": "Modules_DepartmentMaster_DepartmentMaster_1.html"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterSchema.js",
+      "target": "Modules_DepartmentMaster_DepartmentMasterSchema_1.js"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterScript.html",
+      "target": "Modules_DepartmentMaster_DepartmentMasterScript_1.html"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterService.js",
+      "target": "Modules_DepartmentMaster_DepartmentMasterService_1.js"
+    },
+    {
+      "source": "Modules/DepartmentMaster/DepartmentMasterValidation.js",
+      "target": "Modules_DepartmentMaster_DepartmentMasterValidation_1.js"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMaster.html",
+      "target": "Modules_MaterialMaster_MaterialMaster_1.html"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterSchema.js",
+      "target": "Modules_MaterialMaster_MaterialMasterSchema_1.js"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterScript.html",
+      "target": "Modules_MaterialMaster_MaterialMasterScript_1.html"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterService.js",
+      "target": "Modules_MaterialMaster_MaterialMasterService_1.js"
+    },
+    {
+      "source": "Modules/MaterialMaster/MaterialMasterValidation.js",
+      "target": "Modules_MaterialMaster_MaterialMasterValidation_1.js"
+    },
+    {
+      "source": "Modules/Settings.html",
+      "target": "Modules_Settings.html"
+    },
+    {
+      "source": "Modules/SettingsScript.html",
+      "target": "Modules_SettingsScript.html"
+    },
+    {
+      "source": "Modules/Society.html",
+      "target": "Modules_Society.html"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMaster.html",
+      "target": "Modules_SocietyMaster_SocietyMaster.html"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterSchema.js",
+      "target": "Modules_SocietyMaster_SocietyMasterSchema.js"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterScript.html",
+      "target": "Modules_SocietyMaster_SocietyMasterScript.html"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterService.js",
+      "target": "Modules_SocietyMaster_SocietyMasterService.js"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterValidation.js",
+      "target": "Modules_SocietyMaster_SocietyMasterValidation.js"
+    },
+    {
+      "source": "Modules/SocietyScript.html",
+      "target": "Modules_SocietyScript.html"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMaster.html",
+      "target": "Modules_SupplierMaster_SupplierMaster.html"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterSchema.js",
+      "target": "Modules_SupplierMaster_SupplierMasterSchema.js"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterScript.html",
+      "target": "Modules_SupplierMaster_SupplierMasterScript.html"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterService.js",
+      "target": "Modules_SupplierMaster_SupplierMasterService.js"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterValidation.js",
+      "target": "Modules_SupplierMaster_SupplierMasterValidation.js"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMaster.html",
+      "target": "Modules_UnitMaster_UnitMaster.html"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterSchema.js",
+      "target": "Modules_UnitMaster_UnitMasterSchema.js"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterScript.html",
+      "target": "Modules_UnitMaster_UnitMasterScript.html"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterService.js",
+      "target": "Modules_UnitMaster_UnitMasterService.js"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterValidation.js",
+      "target": "Modules_UnitMaster_UnitMasterValidation.js"
+    },
+    {
+      "source": "Navbar.html",
+      "target": "Navbar.html"
+    },
+    {
+      "source": "Components/Pagination/Pagination.html",
+      "target": "Components_Pagination_Pagination_1.html"
+    },
+    {
+      "source": "Components/Pagination/Pagination.js",
+      "target": "Components_Pagination_Pagination_1.js"
+    },
+    {
+      "source": "Response.js",
+      "target": "Response.js"
+    },
+    {
+      "source": "SchemaService.js",
+      "target": "SchemaService.js"
+    },
+    {
+      "source": "Components/SearchBox/SearchBox.html",
+      "target": "Components_SearchBox_SearchBox_1.html"
+    },
+    {
+      "source": "Components/SearchBox/SearchBox.js",
+      "target": "Components_SearchBox_SearchBox_1.js"
+    },
+    {
+      "source": "Modules/Settings.html",
+      "target": "Modules_Settings_1.html"
+    },
+    {
+      "source": "Modules/SettingsScript.html",
+      "target": "Modules_SettingsScript_1.html"
+    },
+    {
+      "source": "SettingsService.js",
+      "target": "SettingsService.js"
+    },
+    {
+      "source": "Sidebar.html",
+      "target": "Sidebar.html"
+    },
+    {
+      "source": "Modules/Society.html",
+      "target": "Modules_Society_1.html"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMaster.html",
+      "target": "Modules_SocietyMaster_SocietyMaster_1.html"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterSchema.js",
+      "target": "Modules_SocietyMaster_SocietyMasterSchema_1.js"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterScript.html",
+      "target": "Modules_SocietyMaster_SocietyMasterScript_1.html"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterService.js",
+      "target": "Modules_SocietyMaster_SocietyMasterService_1.js"
+    },
+    {
+      "source": "Modules/SocietyMaster/SocietyMasterValidation.js",
+      "target": "Modules_SocietyMaster_SocietyMasterValidation_1.js"
+    },
+    {
+      "source": "Modules/SocietyScript.html",
+      "target": "Modules_SocietyScript_1.html"
+    },
+    {
+      "source": "SocietyService.js",
+      "target": "SocietyService.js"
+    },
+    {
+      "source": "Components/Spinner/Spinner.html",
+      "target": "Components_Spinner_Spinner_1.html"
+    },
+    {
+      "source": "Components/Spinner/Spinner.js",
+      "target": "Components_Spinner_Spinner_1.js"
+    },
+    {
+      "source": "Style.html",
+      "target": "Style.html"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMaster.html",
+      "target": "Modules_SupplierMaster_SupplierMaster_1.html"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterSchema.js",
+      "target": "Modules_SupplierMaster_SupplierMasterSchema_1.js"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterScript.html",
+      "target": "Modules_SupplierMaster_SupplierMasterScript_1.html"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterService.js",
+      "target": "Modules_SupplierMaster_SupplierMasterService_1.js"
+    },
+    {
+      "source": "Modules/SupplierMaster/SupplierMasterValidation.js",
+      "target": "Modules_SupplierMaster_SupplierMasterValidation_1.js"
+    },
+    {
+      "source": "Components/Toolbar/Toolbar.html",
+      "target": "Components_Toolbar_Toolbar_1.html"
+    },
+    {
+      "source": "Components/Toolbar/Toolbar.js",
+      "target": "Components_Toolbar_Toolbar_1.js"
+    },
+    {
+      "source": "Tools/Build.js",
+      "target": "Tools_Build.js"
+    },
+    {
+      "source": "Tools/Deploy.js",
+      "target": "Tools_Deploy.js"
+    },
+    {
+      "source": "Tools/DeploymentBuilder.js",
+      "target": "Tools_DeploymentBuilder.js"
+    },
+    {
+      "source": "Tools/DeploymentLogger.js",
+      "target": "Tools_DeploymentLogger.js"
+    },
+    {
+      "source": "Tools/DeploymentReporter.js",
+      "target": "Tools_DeploymentReporter.js"
+    },
+    {
+      "source": "Tools/DeploymentUtilities.js",
+      "target": "Tools_DeploymentUtilities.js"
+    },
+    {
+      "source": "Tools/DeploymentValidator.js",
+      "target": "Tools_DeploymentValidator.js"
+    },
+    {
+      "source": "Tools/DeploymentVersionManager.js",
+      "target": "Tools_DeploymentVersionManager.js"
+    },
+    {
+      "source": "Tools/IncludeResolver.js",
+      "target": "Tools_IncludeResolver.js"
+    },
+    {
+      "source": "Tools/ManifestGenerator.js",
+      "target": "Tools_ManifestGenerator.js"
+    },
+    {
+      "source": "Tools/RollbackManager.js",
+      "target": "Tools_RollbackManager.js"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMaster.html",
+      "target": "Modules_UnitMaster_UnitMaster_1.html"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterSchema.js",
+      "target": "Modules_UnitMaster_UnitMasterSchema_1.js"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterScript.html",
+      "target": "Modules_UnitMaster_UnitMasterScript_1.html"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterService.js",
+      "target": "Modules_UnitMaster_UnitMasterService_1.js"
+    },
+    {
+      "source": "Modules/UnitMaster/UnitMasterValidation.js",
+      "target": "Modules_UnitMaster_UnitMasterValidation_1.js"
+    },
+    {
+      "source": "Utils.js",
+      "target": "Utils.js"
+    }
+  ]
+}

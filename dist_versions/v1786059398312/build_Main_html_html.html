@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahakar ERP - Labour Cooperative Society Management System</title>
+  
+  <!-- Material Symbols & Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- Shared Global Styles -->
+  <?!= include('build_Style_html_html') ?>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Navbar Component -->
+    <?!= include('build_Navbar_html_html') ?>
+
+    <div class="app-body">
+      <!-- Sidebar Component -->
+      <?!= include('build_Sidebar_html_html') ?>
+
+      <!-- Main Content Area -->
+      <main class="main-content" id="main-content">
+        <!-- Dashboard is loaded by ModuleLoader on startup. -->
+        <div class="dashboard-loader">Loading dashboard...</div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-container">
+        <span><strong>Sahakar ERP</strong> | Version 1.0.0</span>
+        <span class="footer-status">Powered by Google Apps Script</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    /**
+     * Loads a registered module into the workspace without reloading the app.
+     */
+    function loadModule(moduleName) {
+      const workspace = document.getElementById('main-content');
+      const requestedModule = String(moduleName || '').trim();
+
+      if (!workspace || !requestedModule) return;
+
+      workspace.innerHTML = '<div class="placeholder-panel">Loading module...</div>';
+
+      google.script.run
+        .withSuccessHandler(html => {
+          const fragment = document.createRange().createContextualFragment(html);
+          const scripts = Array.from(fragment.querySelectorAll('script'));
+          scripts.forEach(script => script.remove());
+          workspace.replaceChildren(fragment);
+
+          // Scripts inserted through innerHTML do not execute automatically.
+          const settingsAlreadyLoaded = requestedModule === 'Settings' &&
+            typeof SettingsModule !== 'undefined';
+
+          scripts.forEach(source => {
+            // A classic script with a top-level const cannot be evaluated
+            // twice. Reuse the existing Settings controller on later visits.
+            if (settingsAlreadyLoaded && requestedModule === 'Settings') return;
+            const script = document.createElement('script');
+            if (source.src) script.src = source.src;
+            script.textContent = source.textContent;
+            document.body.appendChild(script);
+          });
+
+          if (requestedModule === 'Dashboard' && window.DashboardModule) {
+            window.DashboardModule.load();
+          }
+
+          if (requestedModule === 'Society' && window.SocietyModule) {
+            window.SocietyModule.initialize();
+          }
+
+          document.querySelectorAll('.nav-item[data-module]').forEach(item => {
+            item.classList.toggle('active', item.dataset.module === requestedModule);
+          });
+
+          // SettingsScript registers a DOMContentLoaded initializer. Since a
+          // module is loaded after that event, initialize it explicitly.
+          if (requestedModule === 'Settings' && typeof SettingsModule !== 'undefined') {
+            SettingsModule.initialize();
+          }
+        })
+        .withFailureHandler(error => {
+          workspace.innerHTML = '<div class="dashboard-error">Unable to load this module. Please try again.</div>';
+          console.error('Sahakar ERP module load error:', error);
+        })
+        .loadModule(requestedModule);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebar = document.getElementById('sidebar');
+      const toggleBtn = document.getElementById('sidebar-toggle');
+      
+      if (toggleBtn && sidebar) {
+        toggleBtn.addEventListener('click', () => {
+          sidebar.classList.toggle('collapsed');
+        });
+      }
+
+      loadModule('Dashboard');
+
+    });
+  </script>
+</body>
+</html>

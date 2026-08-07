@@ -1,0 +1,48 @@
+<script>
+window.MaterialMasterModule = (function(){
+  'use strict';
+  var M = {};
+  var toolbar, searchBox, dataTable, modal, alertComp, spinner;
+  var allRows = [];
+  var COL = { id: 'Material ID', code: 'Material Code', name: 'Material Name', cat: 'Material Category', unit: 'Unit', gst: 'GST Rate', stock: 'Current Stock', active: 'Active' };
+
+  function toast(msg,type){ if (window.SahakarComponents && window.SahakarComponents.Alert && alertComp){ alertComp.update({ title: '', body: msg, type: type||'info' }); alertComp.show(); setTimeout(()=>alertComp.hide(),3000); } else console.log('Toast',msg); }
+  function setLoading(on){ if (spinner) on?spinner.show():spinner.hide(); }
+  function handleError(err){ console.error('MaterialMasterModule',err); toast(err && err.message?err.message:'Unexpected error','danger'); }
+
+  function buildColumns(){ return [ { key: COL.code, title: 'Code' }, { key: COL.name, title: 'Material' }, { key: COL.cat, title: 'Category' }, { key: COL.unit, title: 'Unit' }, { key: COL.gst, title: 'GST' }, { key: COL.stock, title: 'Stock' }, { key: COL.active, title: 'Active', format: v => (String(v).toLowerCase()==='true'||v===true)?'Yes':'No' } ]; }
+  function prepareRows(rows){ return (rows||[]).map(r=>r); }
+
+  function loadData(q){ setLoading(true); google.script.run.withSuccessHandler(function(resp){ setLoading(false); if (!resp||!resp.success){ handleError(resp); return; } allRows = resp.data||[]; if (dataTable) dataTable.update({ rows: prepareRows(allRows) }); renderSummaryCards(); }).withFailureHandler(function(e){ setLoading(false); handleError(e); }).getMaterials({ q: q||'' }); }
+
+  function renderSummaryCards(){ var total=allRows.length; var inventory=allRows.filter(r=> r['Is Inventory Item']===true).length; var consumable=allRows.filter(r=> r['Is Consumable']===true).length; var container=document.getElementById('materialSummaryRow'); if(!container) return; container.innerHTML=''; var items=[{title:'Total Materials',value:total},{title:'Inventory Items',value:inventory},{title:'Consumables',value:consumable},{title:'Active',value: allRows.filter(r=> r['Active']===true).length}]; items.forEach(function(it){ if (window.SahakarComponents && window.SahakarComponents.Card){ window.SahakarComponents.Card.create(container,{ title: it.title, subtitle: String(it.value), className: 'col' }); } else { var d=document.createElement('div'); d.className='card p-3 col'; d.innerHTML='<h6>'+it.title+'</h6><div><strong>'+it.value+'</strong></div>'; container.appendChild(d); } }); }
+
+  function initComponents(){ if (window.SahakarComponents && window.SahakarComponents.Toolbar){ toolbar = window.SahakarComponents.Toolbar.create('#materialToolbarContainer',{ title:'Material Master', subtitle:'Catalogue of materials', primaryButton:{ text:'Add Material', onClick: openCreate }, refreshButton:{ text:'Refresh', onClick: ()=> loadData('') } }); }
+    if (window.SahakarComponents && window.SahakarComponents.SearchBox){ searchBox = window.SahakarComponents.SearchBox.create('#materialSearchContainer',{ placeholder:'Search by code, name, category', debounce:300, callbacks:{ onSearch: function(q){ loadData(q); } } }); }
+    var filtersHost = document.getElementById('materialFiltersContainer'); if (filtersHost){ filtersHost.innerHTML = '<select id="filterActive" class="form-select form-select-sm"><option value="">All</option><option value="true">Active</option><option value="false">Inactive</option></select>'; filtersHost.querySelectorAll('select').forEach(s=>s.addEventListener('change', applyFilters)); }
+    if (window.SahakarComponents && window.SahakarComponents.DataTable){ dataTable = window.SahakarComponents.DataTable.create('#materialTableContainer',{ columns: buildColumns(), rows: [], pageSize:10, actions:[{key:'view',label:'View'},{key:'edit',label:'Edit'},{key:'delete',label:'Delete'}], onAction: handleAction }); }
+    if (window.SahakarComponents && window.SahakarComponents.Modal){ modal = window.SahakarComponents.Modal.create('#materialModalHost',{ title:'', body:'', primaryButton:{ text:'Save', onClick: handleModalSave }, secondaryButton:{ text:'Cancel', onClick: function(){ modal.hide(); } } }); }
+    if (window.SahakarComponents && window.SahakarComponents.Alert){ alertComp = window.SahakarComponents.Alert.create('#materialAlertHost',{ type:'info', title:'', body:'', timeout:3000 }); }
+    if (window.SahakarComponents && window.SahakarComponents.Spinner){ spinner = window.SahakarComponents.Spinner.create('#materialSpinnerHost',{ size:'large', type:'border', fullscreen:false }); }
+  }
+
+  function applyFilters(){ var status=document.getElementById('filterActive').value; var rows = allRows.filter(function(r){ if (status){ var act = String(r['Active']).toLowerCase()==='true' || r['Active']===true; if (status==='true' && !act) return false; if (status==='false' && act) return false; } return true; }); if (dataTable) dataTable.update({ rows: prepareRows(rows) }); }
+
+  function handleAction(key,row){ if (key==='view') openView(row); else if (key==='edit') openEdit(row); else if (key==='delete') confirmDelete(row); }
+
+  function openCreate(){ if (!modal) return; modal.setTitle('Create Material'); modal.setBody(buildFormHtml()); modal.show(); }
+  function openEdit(row){ if (!modal) return; modal.setTitle('Edit Material'); modal.setBody(buildFormHtml(row)); modal.show(); }
+  function openView(row){ if (!modal) return; modal.setTitle('View Material'); modal.setBody(buildFormHtml(row,true)); modal.show(); }
+
+  function buildFormHtml(rec, readOnly){ rec = rec||{}; var c=document.createElement('div'); c.className='p-2'; var grid=document.createElement('div'); grid.className='row g-2'; var fields=[['Material Code','col-3'],['Material Name','col-9'],['Material Category','col-4'],['Sub Category','col-4'],['Material Type','col-4'],['Unit','col-2'],['GST Rate','col-2'],['Preferred Supplier','col-4'],['Brand','col-4'],['Specification','col-12'],['Grade','col-3'],['Size','col-3'],['Colour','col-3'],['Manufacturer','col-3'],['Minimum Stock','col-3'],['Reorder Level','col-3'],['Current Stock','col-3'],['Standard Rate','col-3'],['Last Purchase Rate','col-3']]; fields.forEach(function(f){ var col=document.createElement('div'); col.className=f[1]; var fg=document.createElement('div'); fg.className='mb-2'; var label=document.createElement('label'); label.className='form-label'; label.textContent=f[0]; var input=document.createElement('input'); input.className='form-control form-control-sm'; input.name=f[0]; input.value = rec[f[0]]||''; if (readOnly) input.disabled=true; fg.appendChild(label); fg.appendChild(input); col.appendChild(fg); grid.appendChild(col); }); c.appendChild(grid); return c; }
+  function collectFormData(root){ var o={}; var inputs = root.querySelectorAll('input,textarea,select'); inputs.forEach(function(i){ o[i.name] = i.type==='checkbox'?i.checked:i.value; }); return o; }
+
+  function handleModalSave(e, inst){ try{ var root = inst && inst.el ? inst.el : document.querySelector('#materialModalHost'); var body = root.querySelector('.modal-body') || root; var data = collectFormData(body); setLoading(true); google.script.run.withSuccessHandler(function(resp){ setLoading(false); if (!resp||!resp.success){ toast((resp&&resp.message)||'Validation failed','danger'); return; } modal.hide(); toast('Saved','success'); loadData(''); }).withFailureHandler(function(err){ setLoading(false); handleError(err); }).saveMaterial(data); } catch(ex){ handleError(ex); } }
+
+  function confirmDelete(row){ if (!confirm('Soft delete this material?')) return; setLoading(true); google.script.run.withSuccessHandler(function(resp){ setLoading(false); if (!resp||!resp.success){ toast((resp&&resp.message)||'Delete failed','danger'); return; } toast('Deleted','success'); loadData(''); }).withFailureHandler(function(err){ setLoading(false); handleError(err); }).softDeleteMaterial(row[COL.id]); }
+
+  M.initialize = function(){ try{ initComponents(); loadData(''); } catch(e){ handleError(e); } };
+  return M; })();
+
+document.addEventListener('DOMContentLoaded', function(){ if (window.MaterialMasterModule) MaterialMasterModule.initialize(); });
+</script>

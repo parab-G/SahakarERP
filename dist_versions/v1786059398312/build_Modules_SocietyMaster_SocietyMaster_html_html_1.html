@@ -1,0 +1,38 @@
+<!--
+  SocietyMaster.html
+  Production-quality Master Data UI for Society Master.
+  Uses reusable components from Components/ and follows Apps Script HTMLService conventions.
+
+  NOTE: Component templates (Components/*/*.html) should be included by the host or via server-side includes
+  so that SahakarComponents factories can find the expected <template> fragments.
+-->
+
+<div id="society-master-root" class="container-fluid p-3">
+  <!-- Toolbar -->
+  <div id="societyToolbarContainer"></div>
+
+  <!-- Summary cards -->
+  <div id="societySummaryRow" class="row g-3 my-3"></div>
+
+  <!-- Search & Filters -->
+  <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+    <div id="societySearchContainer" class="flex-grow-1"></div>
+    <div id="societyFiltersContainer" class="d-flex gap-2"></div>
+  </div>
+
+  <!-- Data table -->
+  <div id="societyTableContainer" class="mb-3"></div>
+
+  <!-- Pagination -->
+  <div id="societyPaginationContainer" class="d-flex justify-content-end"></div>
+
+  <!-- Modal host -->
+  <div id="societyModalHost"></div>
+
+  <!-- Alerts and spinner -->
+  <div id="societyAlertHost"></div>
+  <div id="societySpinnerHost"></div>
+</div>
+
+<!-- Module client script -->
+<?!= include('build_Modules_SocietyMaster_SocietyMasterScript_html_html_1') ?>

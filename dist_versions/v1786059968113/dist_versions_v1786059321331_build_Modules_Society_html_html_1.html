@@ -1,0 +1,76 @@
+<style>
+  .society-container { display: flex; flex-direction: column; gap: 20px; }
+  .society-toolbar { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; box-shadow: var(--shadow-sm); }
+  .society-toolbar-group { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .society-table-wrap { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow-x: auto; box-shadow: var(--shadow-sm); }
+  .society-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+  .society-table th { background: #F1F5F9; padding: 12px 14px; color: var(--text-secondary); border-bottom: 1px solid var(--border-color); white-space: nowrap; }
+  .society-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-color); color: var(--text-primary); white-space: nowrap; }
+  .society-table tbody tr:hover { background: #F8FAFC; }
+  .society-actions { display: flex; gap: 6px; }
+  .society-action { border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; padding: 4px; }
+  .society-action:hover { color: var(--primary-color); }
+  .society-status { display: inline-block; border-radius: 12px; padding: 2px 8px; font-size: 12px; }
+  .society-status.active { background: #D1FAE5; color: #065F46; }
+  .society-status.inactive { background: #FEE2E2; color: #991B1B; }
+  .society-pagination { padding: 12px 16px; color: var(--text-secondary); font-size: 13px; }
+  .society-modal { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; padding: 20px; }
+  .society-modal.hidden { display: none; }
+  .society-modal-content { background: var(--card-bg); width: 100%; max-width: 900px; max-height: 90vh; overflow-y: auto; border-radius: 8px; box-shadow: var(--shadow-md); }
+  .society-modal-header { padding: 16px 20px; background: var(--primary-color); color: #FFF; display: flex; justify-content: space-between; align-items: center; }
+  .society-modal-header h3 { margin: 0; font-size: 18px; font-weight: 500; }
+  .society-modal-body { padding: 20px; }
+  .society-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .society-form-group { display: flex; flex-direction: column; gap: 6px; }
+  .society-form-group.full { grid-column: 1 / -1; }
+  .society-form-label { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+  .society-form-control { padding: 8px 10px; border: 1px solid var(--border-color); border-radius: 4px; font: inherit; min-width: 0; }
+  .society-form-control:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 2px var(--primary-light); }
+  .society-modal-footer { padding: 12px 20px; background: #F8FAFC; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 10px; }
+  .society-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 0; border-radius: 4px; cursor: pointer; font: inherit; }
+  .society-btn.primary { background: var(--primary-color); color: #FFF; }
+  .society-btn.secondary { background: #E2E8F0; color: var(--text-primary); }
+  .society-loader, .society-error { padding: 12px 14px; border-radius: 4px; }
+  .society-loader { background: #F1F5F9; color: var(--text-secondary); }
+  .society-error { background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
+  .society-hidden { display: none; }
+  .society-toast { position: fixed; right: 24px; bottom: 24px; z-index: 200; background: #065F46; color: #FFF; padding: 12px 16px; border-radius: 5px; box-shadow: var(--shadow-md); }
+  @media (max-width: 640px) { .society-modal { padding: 8px; } .society-modal-content { max-height: 96vh; } }
+</style>
+
+<div class="society-container">
+  <div class="page-header">
+    <h2 class="page-title">Society Master</h2>
+    <p class="page-subtitle">Manage labour cooperative society registrations and contacts</p>
+  </div>
+  <div class="society-toolbar">
+    <div class="society-toolbar-group">
+      <input id="societySearch" class="society-form-control" type="search" placeholder="Search societies...">
+      <button id="societyRefresh" class="society-btn secondary" type="button">Refresh</button>
+    </div>
+    <button id="societyAdd" class="society-btn primary" type="button">+ Add Society</button>
+  </div>
+  <div id="societyLoader" class="society-loader society-hidden">Loading societies...</div>
+  <div id="societyError" class="society-error society-hidden" role="alert"></div>
+  <div class="society-table-wrap">
+    <table class="society-table">
+      <thead><tr><th>Society ID</th><th>Society Name</th><th>Registration Number</th><th>Village</th><th>Taluka</th><th>Chairman</th><th>Mobile</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody id="societyTableBody"></tbody>
+    </table>
+    <div class="society-pagination">Pagination placeholder · Showing all loaded records</div>
+  </div>
+</div>
+
+<div id="societyModal" class="society-modal hidden" role="dialog" aria-modal="true">
+  <div class="society-modal-content">
+    <div class="society-modal-header"><h3 id="societyModalTitle">Add Society</h3><button id="societyModalClose" class="society-action" style="color:#FFF" type="button">×</button></div>
+    <div class="society-modal-body"><div id="societyFormError" class="society-error society-hidden"></div><form id="societyForm"><div id="societyFormGrid" class="society-form-grid"></div></form></div>
+    <div class="society-modal-footer"><button id="societyCancel" class="society-btn secondary" type="button">Cancel</button><button id="societySave" class="society-btn primary" type="button">Save Society</button></div>
+  </div>
+</div>
+<div id="societyToast" class="society-toast society-hidden" role="status"></div>
+<div id="societyConfirm" class="society-modal hidden" role="dialog" aria-modal="true">
+  <div class="society-modal-content" style="max-width:420px"><div class="society-modal-header"><h3>Delete Society</h3></div><div class="society-modal-body">Are you sure you want to soft delete this society record?</div><div class="society-modal-footer"><button id="societyConfirmCancel" class="society-btn secondary" type="button">Cancel</button><button id="societyConfirmDelete" class="society-btn primary" type="button">Delete</button></div></div>
+</div>
+
+<?!= include('build_build_Modules_SocietyScript_html_html_1') ?>

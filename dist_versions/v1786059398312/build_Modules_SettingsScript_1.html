@@ -1,0 +1,350 @@
+<script>
+
+/**
+ * Settings.js
+ * Frontend controller logic for managing Sahakar ERP Settings screen.
+ */
+
+const SettingsModule = (function () {
+  let cacheSettings = [];
+  let isEditMode = false;
+
+  /**
+   * Initializes the settings module by fetching category filters and loading table records.
+   */
+  function initialize() {
+    loadCategories();
+    loadSettings();
+  }
+
+  /**
+   * Calls backend getCategories to populate the dropdown category filter.
+   */
+  function loadCategories() {
+    google.script.run
+      .withSuccessHandler(response => {
+        if (response && response.success) {
+          const select = document.getElementById('categoryFilter');
+          const currentVal = select.value;
+          select.innerHTML = '<option value="">All Categories</option>';
+          response.data.forEach(cat => {
+            const opt = document.createElement('option');
+            opt.value = cat;
+            opt.textContent = cat;
+            select.appendChild(opt);
+          });
+          select.value = currentVal;
+        }
+      })
+      .withFailureHandler(handleServerError)
+      .getCategories();
+  }
+
+  /**
+   * Fetches settings list based on filter selection.
+   */
+  function loadSettings() {
+    const categorySelect = document.getElementById('categoryFilter');
+    const selectedCategory = categorySelect ? categorySelect.value : '';
+
+    const tbody = document.getElementById('settingsTableBody');
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-secondary);">Loading settings...</td></tr>';
+
+    if (selectedCategory) {
+      google.script.run
+        .withSuccessHandler(handleLoadSuccess)
+        .withFailureHandler(handleServerError)
+        .getCategory(selectedCategory);
+    } else {
+      google.script.run
+        .withSuccessHandler(handleLoadSuccess)
+        .withFailureHandler(handleServerError)
+        .searchSettings('');
+    }
+  }
+
+  /**
+   * Callback handling setting list load success.
+   * @param {Object} response - Standard backend response wrapper.
+   */
+  function handleLoadSuccess(response) {
+    if (response && response.success) {
+      cacheSettings = response.data || [];
+      renderTable(cacheSettings);
+    } else {
+      showError(response ? response.message : 'Failed to fetch settings data');
+    }
+  }
+
+  /**
+   * Renders array of settings into the DOM table.
+   * @param {Array<Object>} data - Settings records.
+   */
+  function renderTable(data) {
+    const tbody = document.getElementById('settingsTableBody');
+    tbody.innerHTML = '';
+
+    if (!data || data.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-secondary);">No settings records found.</td></tr>';
+      return;
+    }
+
+    data.forEach(item => {
+      const tr = document.createElement('tr');
+      const isActive = item.Active === true || String(item.Active).toUpperCase() === 'TRUE';
+      const statusBadge = isActive 
+        ? '<span class="status-badge badge-active">Active</span>' 
+        : '<span class="status-badge badge-inactive">Inactive</span>';
+
+      tr.innerHTML = `
+        <td><strong>${escapeHtml(item.Category)}</strong></td>
+        <td><code>${escapeHtml(item.Code)}</code></td>
+        <td>${escapeHtml(item['Display Name'])}</td>
+        <td>${escapeHtml(item.Description || '-')}</td>
+        <td>${item.Sequence}</td>
+        <td>${statusBadge}</td>
+        <td>
+          <div class="table-actions">
+            <button class="action-btn" title="Edit" onclick="SettingsModule.openEditModal('${item['Setting ID']}')">
+              <span class="material-symbols-outlined">edit</span>
+            </button>
+            <button class="action-btn" title="Delete" onclick="SettingsModule.deleteSetting('${item['Setting ID']}')">
+              <span class="material-symbols-outlined">delete</span>
+            </button>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  /**
+   * Event handler for Category dropdown selection change.
+   */
+  function filterCategory() {
+    loadSettings();
+  }
+
+  /**
+   * Client-side search across Category, Code, Display Name, Description.
+   */
+  function searchSettings() {
+    const term = document.getElementById('searchInput').value.toLowerCase().trim();
+    if (!term) {
+      renderTable(cacheSettings);
+      return;
+    }
+    const filtered = cacheSettings.filter(item => 
+      String(item.Category || '').toLowerCase().includes(term) ||
+      String(item.Code || '').toLowerCase().includes(term) ||
+      String(item['Display Name'] || '').toLowerCase().includes(term) ||
+      String(item.Description || '').toLowerCase().includes(term)
+    );
+    renderTable(filtered);
+  }
+
+  /**
+   * Refreshes Categories and Settings list.
+   */
+  function refreshSettings() {
+    loadCategories();
+    loadSettings();
+  }
+
+  /**
+   * Opens the Modal dialog in Add mode.
+   */
+  function openAddModal() {
+    isEditMode = false;
+    document.getElementById('modalTitle').textContent = 'Add Setting';
+    document.getElementById('settingIdInput').value = '';
+    document.getElementById('settingCategory').value = document.getElementById('categoryFilter').value || '';
+    document.getElementById('settingCode').value = '';
+    document.getElementById('settingDisplayName').value = '';
+    document.getElementById('settingDescription').value = '';
+    document.getElementById('settingSequence').value = '1';
+    document.getElementById('settingActive').checked = true;
+    hideAlert();
+    document.getElementById('settingModal').classList.remove('hidden');
+  }
+
+  /**
+   * Opens the Modal dialog in Edit mode for a target record ID.
+   * @param {string} settingId - Primary ID of record.
+   */
+  function openEditModal(settingId) {
+    const item = cacheSettings.find(r => String(r['Setting ID']) === String(settingId));
+    if (!item) return;
+
+    isEditMode = true;
+    document.getElementById('modalTitle').textContent = 'Edit Setting';
+    document.getElementById('settingIdInput').value = item['Setting ID'];
+    document.getElementById('settingCategory').value = item.Category || '';
+    document.getElementById('settingCode').value = item.Code || '';
+    document.getElementById('settingDisplayName').value = item['Display Name'] || '';
+    document.getElementById('settingDescription').value = item.Description || '';
+    document.getElementById('settingSequence').value = item.Sequence || 1;
+    document.getElementById('settingActive').checked = (item.Active === true || String(item.Active).toUpperCase() === 'TRUE');
+    
+    hideAlert();
+    document.getElementById('settingModal').classList.remove('hidden');
+  }
+
+  /**
+   * Reads form modal values, triggers validation, and dispatches save/update to backend.
+   */
+  function saveSetting() {
+    const saveBtn = document.getElementById('saveSettingBtn');
+    hideAlert();
+
+    const record = {
+      Category: document.getElementById('settingCategory').value,
+      Code: document.getElementById('settingCode').value,
+      'Display Name': document.getElementById('settingDisplayName').value,
+      Description: document.getElementById('settingDescription').value,
+      Sequence: parseInt(document.getElementById('settingSequence').value, 10),
+      Active: document.getElementById('settingActive').checked
+    };
+
+    // Client-side quick check
+    if (!record.Category || !record.Code || !record['Display Name']) {
+      showAlert('Please fill in all mandatory fields (*).');
+      return;
+    }
+
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Saving...';
+
+    const settingId = document.getElementById('settingIdInput').value;
+
+    if (isEditMode && settingId) {
+      google.script.run
+        .withSuccessHandler(onSaveSuccess)
+        .withFailureHandler(onSaveFailure)
+        .updateSetting(settingId, record);
+    } else {
+      google.script.run
+        .withSuccessHandler(onSaveSuccess)
+        .withFailureHandler(onSaveFailure)
+        .saveSetting(record);
+    }
+  }
+
+  /**
+   * Backend callback for successful save/update operation.
+   * @param {Object} response - Standard response wrapper.
+   */
+  function onSaveSuccess(response) {
+    const saveBtn = document.getElementById('saveSettingBtn');
+    saveBtn.disabled = false;
+    saveBtn.textContent = 'Save Setting';
+
+    if (response && response.success) {
+      closeModal();
+      refreshSettings();
+    } else if (response && response.status === 'VALIDATION_ERROR') {
+      const msgs = response.errors ? response.errors.map(e => e.message).join(' ') : response.message;
+      showAlert(msgs);
+    } else {
+      showAlert(response ? response.message : 'Error executing save setting.');
+    }
+  }
+
+  /**
+   * Backend callback failure handler during save.
+   */
+  function onSaveFailure(error) {
+    const saveBtn = document.getElementById('saveSettingBtn');
+    saveBtn.disabled = false;
+    saveBtn.textContent = 'Save Setting';
+    showAlert(error ? error.message : 'Server error occurred.');
+  }
+
+  /**
+   * Triggers soft deletion of a setting record.
+   * @param {string} settingId - Target record ID.
+   */
+  function deleteSetting(settingId) {
+    if (!confirm('Are you sure you want to soft delete this setting record?')) {
+      return;
+    }
+
+    google.script.run
+      .withSuccessHandler(response => {
+        if (response && response.success) {
+          refreshSettings();
+        } else {
+          alert(response ? response.message : 'Failed to delete record.');
+        }
+      })
+      .withFailureHandler(handleServerError)
+      .softDeleteSetting(settingId);
+  }
+
+  /**
+   * Closes the active modal dialog.
+   */
+  function closeModal() {
+    document.getElementById('settingModal').classList.add('hidden');
+  }
+
+  /**
+   * Displays modal validation alert error box.
+   */
+  function showAlert(msg) {
+    const alertBox = document.getElementById('modalAlert');
+    alertBox.textContent = msg;
+    alertBox.style.display = 'block';
+  }
+
+  /**
+   * Hides modal validation alert error box.
+   */
+  function hideAlert() {
+    const alertBox = document.getElementById('modalAlert');
+    alertBox.style.display = 'none';
+    alertBox.textContent = '';
+  }
+
+  /**
+   * Generic server error failure handler.
+   */
+  function handleServerError(err) {
+    console.error('Sahakar ERP Server Error:', err);
+    alert('Server Error: ' + (err.message || err));
+  }
+
+  /**
+   * Utility to escape HTML strings.
+   */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;');
+  }
+
+  return {
+    initialize: initialize,
+    loadCategories: loadCategories,
+    loadSettings: loadSettings,
+    filterCategory: filterCategory,
+    searchSettings: searchSettings,
+    refreshSettings: refreshSettings,
+    openAddModal: openAddModal,
+    openEditModal: openEditModal,
+    saveSetting: saveSetting,
+    deleteSetting: deleteSetting,
+    closeModal: closeModal
+  };
+})();
+
+// Auto-initialize when loaded
+document.addEventListener('DOMContentLoaded', () => {
+  SettingsModule.initialize();
+});
+
+</script>
