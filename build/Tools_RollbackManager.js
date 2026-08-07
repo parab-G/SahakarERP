@@ -12,11 +12,11 @@ function rollbackTo(versionId, config){
   const versionsDir = path.join(repoRoot, config.versionsDir || 'dist_versions');
   const snapshotDir = path.join(versionsDir, versionId);
   if (!fs.existsSync(snapshotDir)) throw new Error('Snapshot not found: ' + snapshotDir);
-  const distDir = path.join(repoRoot, config.distDir);
-  // Remove current dist and copy snapshot
-  if (fs.existsSync(distDir)) Utilities.removeDir(distDir);
-  Utilities.copyDir(snapshotDir, distDir);
-  return { restored: true, distDir };
+  const targetDir = path.join(repoRoot, config.buildDir || config.distDir);
+  // Remove current build/dist and copy snapshot
+  if (fs.existsSync(targetDir)) Utilities.removeDir(targetDir);
+  Utilities.copyDir(snapshotDir, targetDir);
+  return { restored: true, targetDir };
 }
 
 module.exports = { rollbackTo };

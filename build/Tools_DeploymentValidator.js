@@ -32,11 +32,19 @@ function validate(cfg){
     return fail('Build directory not found: ' + buildDir);
   }
 
-  // Check .clasp.json
-  const claspPath = path.join(buildDir, '.clasp.json');
-  if (!fs.existsSync(claspPath)) return fail('.clasp.json missing in build directory');
-  else {
-    try{ const c = JSON.parse(fs.readFileSync(claspPath,'utf8')); if (!c.rootDir || c.rootDir !== config.buildDir) warn('.clasp.json rootDir does not match config.buildDir'); } catch(e){ return fail('Invalid JSON in ' + claspPath); }
+  // Ensure repository .clasp.json exists
+  const repoClasp = path.join(repoRoot, '.clasp.json');
+  if (!fs.existsSync(repoClasp)){
+    return fail('Repository .clasp.json not found at project root. Deployment requires repository .clasp.json with scriptId.');
+  }
+  let repoClaspObj = null;
+  try{ repoClaspObj = JSON.parse(fs.readFileSync(repoClasp,'utf8')); } catch(e){ return fail('Invalid JSON in repository .clasp.json'); }
+  if (!repoClaspObj.scriptId) return fail('Repository .clasp.json missing scriptId');
+
+  // If build/.clasp.json exists, validate scriptId consistency
+  const buildClaspPath = path.join(buildDir, '.clasp.json');
+  if (fs.existsSync(buildClaspPath)){
+    try{ const buildClasp = JSON.parse(fs.readFileSync(buildClaspPath,'utf8')); if (!buildClasp.scriptId) return fail('build/.clasp.json missing scriptId'); if (buildClasp.scriptId !== repoClaspObj.scriptId) return fail('scriptId mismatch between repository .clasp.json and build/.clasp.json'); } catch(e){ return fail('Invalid JSON in build/.clasp.json'); }
   }
 
   // Collect build files

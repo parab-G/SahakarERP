@@ -16,6 +16,6 @@
   ],
   "extensions": [".html", ".js", ".gs"],
   "buildDir": "build",
-  "logFile": "build/deployment_log.txt",
+  "logFile": "AI/DEPLOYMENT/deployment_log.txt",
   "reportFile": "AI/DEPLOYMENT/DEPLOYMENT_REPORT.md"
 }

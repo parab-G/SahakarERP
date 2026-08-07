@@ -58,11 +58,12 @@ const logger = new Logger(config.logFile, { verbose });
     // Stage 5: Apps Script manifest generation
     logger.info('Stage 5: Generating appsscript.json');
     const appsscript = ManifestGen.generate(config, manifest);
-    fs.writeFileSync(path.join(config.distDir,'appsscript.json'), JSON.stringify(appsscript, null, 2), 'utf8');
+    // write appsscript.json into buildDir
+    fs.writeFileSync(path.join(config.distDir || config.buildDir,'appsscript.json'), JSON.stringify(appsscript, null, 2), 'utf8');
     logger.info('appsscript.json written');
 
     // Stage 6: Validation
-    logger.info('Stage 6: Validating dist output');
+    logger.info('Stage 6: Validating build output');
     const vres = Validator.validate(config);
     if (!vres.ok){
       logger.error('Validation failed');

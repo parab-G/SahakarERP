@@ -289,16 +289,9 @@ function build(){
     }
   }
 
-  // Step 6: write build/.clasp.json
-  const claspJson = { scriptId: '', rootDir: config.buildDir };
-  if (!dryRun){
-    fs.writeFileSync(path.join(buildDir,'.clasp.json'), JSON.stringify(claspJson, null, 2), 'utf8');
-    log('Wrote', path.join(buildDir,'.clasp.json'));
-  }
-
-  // Step 7: write report
+  // Step 6: build complete — write deployment report only to reportFile (outside build)
   const report = generateReport({ filesScanned: files.length, builtFiles, conflicts, brokenIncludes, warnings });
-  if (!dryRun){ fs.writeFileSync(reportFile, report, 'utf8'); fs.writeFileSync(path.join(buildDir, 'deployment_log.txt'), report, 'utf8'); }
+  if (!dryRun){ fs.writeFileSync(reportFile, report, 'utf8'); }
   console.log('Build complete. Files built:', builtFiles.length);
   if (brokenIncludes.length) console.warn('Broken includes detected:', brokenIncludes.length, 'see', reportFile);
 }

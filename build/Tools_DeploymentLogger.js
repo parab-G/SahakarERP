@@ -8,7 +8,8 @@ const path = require('path');
 
 class Logger {
   constructor(logFile, opts){
-    this.logFile = logFile || path.join(process.cwd(),'build','deployment_log.txt');
+    // default log path outside build to avoid contaminating deploy workspace
+    this.logFile = logFile || path.join(process.cwd(),'AI','DEPLOYMENT','deployment_log.txt');
     this.verbose = opts && opts.verbose;
     try{ fs.mkdirSync(path.dirname(this.logFile), { recursive: true }); } catch(e){}
   }

@@ -1,0 +1,83 @@
+[INFO] Deploy starting
+[INFO] Starting build step
+[INFO] [dry-run] would execute Build.js
+[INFO] Wrote build/.clasp.json
+[INFO] Build-only requested; stopping after build and validate
+[INFO] Deploy starting
+[INFO] Starting build step
+[INFO] [dry-run] would execute Build.js
+[INFO] [dry-run] would write build/.clasp.json
+[INFO] Build-only requested; stopping after build and validate
+[INFO] Deploy starting
+[INFO] Starting build step
+[INFO] Build started
+[INFO] Stage 1: Repository scan
+[INFO] Scanned 154 files
+[INFO] Stage 2: Building dependency graph
+[INFO] Dependency graph written
+[INFO] Stage 3: Generating filename mapping
+[INFO] Deployment manifest written
+[INFO] Stage 4: Resolving includes and generating dist files
+[INFO] Files copied: 154
+[INFO] Stage 5: Generating appsscript.json
+[INFO] appsscript.json written
+[INFO] Stage 6: Validating build output
+[INFO] Build completed successfully
+[INFO] Wrote build/.clasp.json
+[INFO] Build-only requested; stopping after build and validate
+[INFO] Build started
+[INFO] Stage 1: Repository scan
+[INFO] Scanned 154 files
+[INFO] Stage 2: Building dependency graph
+[INFO] Dependency graph written
+[INFO] Stage 3: Generating filename mapping
+[INFO] Deployment manifest written
+[INFO] Stage 4: Resolving includes and generating dist files
+[INFO] Files copied: 154
+[INFO] Stage 5: Generating appsscript.json
+[INFO] appsscript.json written
+[INFO] Stage 6: Validating build output
+[INFO] Build completed successfully
+[INFO] Build started
+[INFO] Stage 1: Repository scan
+[INFO] Scanned 154 files
+[INFO] Stage 2: Building dependency graph
+[INFO] Dependency graph written
+[INFO] Stage 3: Generating filename mapping
+[INFO] Deployment manifest written
+[INFO] Stage 4: Resolving includes and generating dist files
+[INFO] Files copied: 154
+[INFO] Stage 5: Generating appsscript.json
+[INFO] appsscript.json written
+[INFO] Stage 6: Validating build output
+[INFO] Build completed successfully
+[INFO] Build started
+[INFO] Stage 1: Repository scan
+[INFO] Scanned 154 files
+[INFO] Stage 2: Building dependency graph
+[INFO] Dependency graph written
+[INFO] Stage 3: Generating filename mapping
+[INFO] Deployment manifest written
+[INFO] Stage 4: Resolving includes and generating dist files
+[INFO] Files copied: 154
+[INFO] Stage 5: Generating appsscript.json
+[INFO] appsscript.json written
+[INFO] Stage 6: Validating build output
+[INFO] Build completed successfully
+[INFO] Deploy starting
+[INFO] Starting build step
+[INFO] Build started
+[INFO] Stage 1: Repository scan
+[INFO] Scanned 154 files
+[INFO] Stage 2: Building dependency graph
+[INFO] Dependency graph written
+[INFO] Stage 3: Generating filename mapping
+[INFO] Deployment manifest written
+[INFO] Stage 4: Resolving includes and generating dist files
+[INFO] Files copied: 154
+[INFO] Stage 5: Generating appsscript.json
+[INFO] appsscript.json written
+[INFO] Stage 6: Validating build output
+[INFO] Build completed successfully
+[INFO] Wrote build/.clasp.json
+[INFO] Build-only requested; stopping after build and validate

@@ -23,19 +23,21 @@ Contents
 How to use
 
 1. From repository root run (Node required):
-   node Tools/DeploymentBuilder.js
+   node Tools/Build.js --config Tools/DeploymentConfig.json
 
-2. Validate build (optional but recommended):
-   node Tools/DeploymentValidator.js
+2. Full deploy (build + push + versioning):
+   node Tools/Deploy.js --config Tools/DeploymentConfig.json --deploy
 
-3. Push with clasp from repo root:
-   clasp push --force (clasp will use build/.clasp.json rootDir)
+3. Validate build (optional but recommended):
+   node Tools/DeploymentValidator.js --config Tools/DeploymentConfig.json
 
 Notes
 
 - The builder never modifies source files.
+- The repository .clasp.json remains authoritative; Deploy.js reads it and generates build/.clasp.json for the deploy workspace.
+- The build/ directory is the only folder pushed to Apps Script. Source files are never uploaded.
 - Running the builder twice produces identical build/ output if sources did not change.
-- Review AI/DEPLOYMENT/DEPLOYMENT_WORKFLOW.md for details on flags and CI usage.
+- Review AI/DEPLOYMENT/DEPLOYMENT_WORKFLOW.md for detailed lifecycle and flags.
 
 Configuration schema (Tools/DeploymentConfig.json)
 

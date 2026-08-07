@@ -38,16 +38,16 @@ const logger = new Logger(config.logFile, { verbose });
     const scanned = Builder.scan(config);
     logger.info(`Scanned ${scanned.length} files`);
 
-    // Stage 2: Dependency graph
+    // Stage 2: Dependency graph (written to AI/DEPLOYMENT, not build/)
     logger.info('Stage 2: Building dependency graph');
     const depGraph = Builder.buildDependencyGraph(scanned);
-    Utilities.writeJson(path.join(config.distDir,'dependency_graph.json'), depGraph);
+    Utilities.writeJson(path.join(repoRoot, 'AI', 'DEPLOYMENT', 'dependency_graph.json'), depGraph);
     logger.info('Dependency graph written');
 
-    // Stage 3: Filename mapping
+    // Stage 3: Filename mapping (written to AI/DEPLOYMENT, not build/)
     logger.info('Stage 3: Generating filename mapping');
     const manifest = Builder.generateFilenameMapping(scanned);
-    Utilities.writeJson(path.join(config.distDir,'deployment_manifest.json'), manifest);
+    Utilities.writeJson(path.join(repoRoot, 'AI', 'DEPLOYMENT', 'deployment_manifest.json'), manifest);
     logger.info('Deployment manifest written');
 
     // Stage 4: Include resolver and copy files
@@ -58,11 +58,12 @@ const logger = new Logger(config.logFile, { verbose });
     // Stage 5: Apps Script manifest generation
     logger.info('Stage 5: Generating appsscript.json');
     const appsscript = ManifestGen.generate(config, manifest);
-    fs.writeFileSync(path.join(config.distDir,'appsscript.json'), JSON.stringify(appsscript, null, 2), 'utf8');
+    // write appsscript.json into buildDir
+    fs.writeFileSync(path.join(config.distDir || config.buildDir,'appsscript.json'), JSON.stringify(appsscript, null, 2), 'utf8');
     logger.info('appsscript.json written');
 
     // Stage 6: Validation
-    logger.info('Stage 6: Validating dist output');
+    logger.info('Stage 6: Validating build output');
     const vres = Validator.validate(config);
     if (!vres.ok){
       logger.error('Validation failed');

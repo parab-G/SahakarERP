@@ -3,39 +3,41 @@
 Developer flow (one-command experience)
 
 1. Build
-   node Tools/DeploymentBuilder.js
-   - Scans, transforms and writes build/ and build/.clasp.json
-   - Produces AI/DEPLOYMENT/DEPLOYMENT_REPORT.md and build/deployment_log.txt
+   node Tools/Build.js --config Tools/DeploymentConfig.json
+   - Scans, transforms and writes build/ (only deployable files) and build/appsscript.json
+   - Produces AI/DEPLOYMENT/DEPLOYMENT_REPORT.md (report) and AI/DEPLOYMENT/deployment_log.txt (logs)
 
-2. Validate (optional but recommended)
-   node Tools/DeploymentValidator.js
-   - Verifies include references, lists broken includes and warnings
+2. Validate (automatic in Deploy.js or run manually)
+   node Tools/DeploymentValidator.js --config Tools/DeploymentConfig.json
+   - Verifies includes, manifest consistency, and repository .clasp.json presence
 
-3. Push
-   clasp push
-   - Because .clasp.json in build/ is present, use: clasp push --rootDir build or rely on build/.clasp.json
+3. Push (performed from build/ by Deploy.js)
+   node Tools/Deploy.js --config Tools/DeploymentConfig.json --deploy
+   - Deploy.js writes build/.clasp.json (scriptId from repository .clasp.json) and runs: cd build && clasp push
 
-4. Deploy
-   Use Apps Script UI or clasp deploy commands as usual
+4. Version
+   node Tools/Deploy.js --version
+   - Creates an Apps Script version after a successful push
 
-CI Integration
-
-- Add a job step to run DeploymentBuilder.js, then DeploymentValidator.js
-- Fail build on validator errors
+5. Snapshot
+   - After successful push/version, Deploy.js triggers a snapshot of the build into dist_versions/ for rollback
 
 Commands
 
-- Build only: node Tools/DeploymentBuilder.js
-- Validate only: node Tools/DeploymentValidator.js
-- Full flow (build + validate): node Tools/DeploymentBuilder.js && node Tools/DeploymentValidator.js
+- Full deploy: node Tools/Deploy.js --config Tools/DeploymentConfig.json --deploy
+- Build only: node Tools/Deploy.js --build-only
+- Push only: node Tools/Deploy.js --push-only
+- Create version: node Tools/Deploy.js --version
+- Dry run: add --dry-run to any command
 
-Flags (supported in scripts)
+Flags (supported)
 
-- --config path/to/Tools/DeploymentConfig.json  (use custom config)
-- --dry-run (simulate actions; no files written)
+- --config path/to/Tools/DeploymentConfig.json
+- --dry-run (simulate actions; no push/versioning)
 - --verbose (detailed logging)
 
 Notes
 
-- The builder will refuse to overwrite an existing build/ unless --force is provided.
-- Always inspect AI/DEPLOYMENT/DEPLOYMENT_REPORT.md and build/deployment_log.txt before deploying to production.
+- The repository .clasp.json remains authoritative and must contain scriptId. Deploy.js reads it and generates build/.clasp.json automatically.
+- The build/ directory is the only folder pushed to Apps Script. Source files are never uploaded.
+- Logs and reports are written to AI/DEPLOYMENT/ (not into build/).
